@@ -146,3 +146,149 @@ right: 5em;
     background-color: rgba(0, 212, 35, 0.8);
 }
 
+@media (max-width: 1024px) {
+    .banner-container {
+        flex-direction: column;
+        height: auto;
+        padding: 90px;
+        margin-top: 2em;
+        
+    }
+
+    .banner-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 2em;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    .cards-container {
+        margin-top: 2em;
+       
+    }
+
+    .card {
+        min-width: 200px;
+    
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1.2em;
+    }
+
+    .banner-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .card {
+        min-width: 120px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        padding: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+      
+    }
+
+    .banner-content button {
+        font-size: 12px;
+        padding: 8px 16px;
+        color: rgb(32, 70, 34);
+    }
+
+    .card {
+        min-width: 100px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+}
+/* Ajustes generales */
+.card {
+    min-width: 200px; /* Ajusta el ancho mínimo general si es necesario */
+    margin-right: 15px; /* Espacio entre tarjetas */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: white;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Ajusta la altura de la imagen para pantallas grandes */
+    object-fit: cover;
+    border-bottom: 2px solid #32CD32; /* Verde Lima */
+}
+
+.card-text {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ajustes para tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .card {
+        min-width: 250px; /* Aumentar el ancho mínimo en tablets */
+    }
+
+    .card img {
+        height: 270px; /* Aumentar la altura de la imagen en tablets */
+    }
+
+    .card-text {
+        padding: 20px; /* Aumentar el espaciado interno */
+        font-size: 20px; /* Aumentar el tamaño de la fuente */
+    }
+}
+
+/* Ajustes para móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .card {
+        min-width: 220px; /* Aumentar el ancho mínimo en móviles */
+    }
+
+    .card img {
+        height: 250px; /* Aumentar la altura de la imagen en móviles */
+    }
+
+    .card-text {
+        padding: 15px; /* Ajustar el espaciado interno */
+        font-size: 18px; /* Ajustar el tamaño de la fuente */
+    }
+}
