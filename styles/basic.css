@@ -1,3 +1,11 @@
+:root{
+    --rosa-coral: #ff6f61;
+    --naranja-purpura: #ff4500;
+    --dorado-suave: #ffd700;
+    --gris-oscuro: #4d5151;
+    --blanco-hueso: #faf0e6;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -5,4 +13,32 @@ body{
 }
 main{
     flex-grow: 1;
+    background-color: var(--blanco-hueso);
+}
+.fondoNavFooter{
+    background-color: var(--gris-oscuro);
+}
+.logoNav{
+    max-height: 40px;
+    width: auto;
+}
+.iconosLetrasNav{
+    color: var(--dorado-suave) !important;
+}
+.iconosLetrasNav:hover{
+    text-shadow: 0px 4px 8px var(--naranja-purpura);
+    transform: translateY(-5px);
+}
+.titulosFooter{
+    color: var(--dorado-suave);
+}
+.textosFooter{
+    color: var(--blanco-hueso);
+}
+.textosFooter:hover{
+    cursor: pointer;
+}
+.hrFooter{
+    color: var(--dorado-suave);
+    font-weight: bold;
 }
