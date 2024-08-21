@@ -6,3 +6,20 @@ body{
 main{
     flex-grow: 1;
 }
+.imgDetalle{
+    height: 235px;
+    object-fit: cover;
+}
+
+@media all and (min-width: 577px) and (max-width: 991px){
+    .imgDetalle{
+        height: 400px;
+        object-position: 50% 10%;
+    }
+}
+@media all and (min-width: 992px){
+    .imgDetalle{
+        height: 450px;
+        object-position: 50% 10%; 
+    }
+}
