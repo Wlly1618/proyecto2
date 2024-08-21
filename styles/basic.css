@@ -9,11 +9,7 @@ main{
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://static.madenta-budapest.co.uk/uploads/dental-holiday-budapest.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    padding: 0;
+   
  
       
 }
@@ -27,7 +23,11 @@ body {
     color: white;
     height: 100vh;
     box-sizing: border-box;
-   
+    background-image: url('https://static.madenta-budapest.co.uk/uploads/dental-holiday-budapest.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
  
 }
 .banner-content {
@@ -86,6 +86,7 @@ padding: 0.3em;
     overflow: hidden;
     scroll-behavior: smooth;
     margin-top: 7em;
+    margin-left: 2.5em;
 }
 
 .card {
@@ -97,6 +98,7 @@ padding: 0.3em;
     transition: transform 0.3s ease;
     background-color: white;
     text-align: center;
+    margin-left: 0.9em;
 }
 
 .card img {
@@ -290,5 +292,120 @@ right: 5em;
     .card-text {
         padding: 15px; /* Ajustar el espaciado interno */
         font-size: 18px; /* Ajustar el tamaño de la fuente */
+    }
+}
+
+/* Estilo general para la sección de tarjetas */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+.country-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 30px;
+}
+.country-card {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+}
+
+
+.country-card-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Aumentar altura de la imagen */
+    display: flex;
+    align-items: flex-end;
+}
+
+.country-card-text{
+    color: #fff; /* Color del texto */
+    font-size: 4em; /* Tamaño del texto */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto para mejorar legibilidad */
+    text-align: center;
+    padding: 20px;
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px;
+    margin-left: 1em;
+}
+
+
+.texto-1{
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+
+    padding: 1em;
+
+    color: rgba(180, 167, 50, 0.897);
+
+}
+
+.country-card-text a{
+font-size: 0.5em; 
+color: #fff;  
+}
+.country-card-text a:hover{
+color: #32CD32;
+}
+
+
+@media (max-width: 768px) {
+    .country-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas más grandes en tablets */
+    }
+    .country-card-image {
+        height: 350px; /* Aumentar altura en tablets */
+    }
+
+    .country-card-text {
+        font-size: 3.5em; 
+        text-align: center;
+        padding: 0.6em;/* Texto un poco más grande en tablets */
+    }
+}
+
+/* Media Queries para Celulares */
+@media (max-width: 480px) {
+    .country-cards {
+        grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+    }
+
+    .country-card-image {
+        height: 300px; /* Aumentar altura en celulares */
+    }
+  
+
+
+    
+
+    .country-card-text ul {
+        flex-direction: column;
+        text-align: center;
     }
 }
