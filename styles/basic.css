@@ -28,6 +28,18 @@ main{
     right: 0;
     left: 0;
 }
+.listaTabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    min-width: 100%;
+    overflow: auto;
+}
+
+.anchoPalabra{
+    width: max-content;
+}
 
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
