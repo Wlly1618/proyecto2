@@ -1,3 +1,5 @@
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -75,79 +77,6 @@ padding: 0.3em;
     
 }
 
-.carousel-container {
-    max-width: 50%;
-    position: relative;
-
-}
-
-.cards-container {
-    display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    margin-top: 7em;
-    margin-left: 2.5em;
-}
-
-.card {
-    min-width: 200px;
-    margin-right: 15px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color: white;
-    text-align: center;
-    margin-left: 0.9em;
-}
-
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-bottom: 2px solid #32CD32; /* Verde Lima */
-}
-
-.card-text {
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.carousel-controls {
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-
-}
-.scroll-btn .left{
-right: 5em;
-}
-
-.scroll-btn {
-    background-color: rgba(131, 211, 40, 0.5);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 212, 35, 0.8);
-}
-
 @media (max-width: 1024px) {
     .banner-container {
         flex-direction: column;
@@ -165,25 +94,7 @@ right: 5em;
         margin-top: 0;
     }
 
-    .carousel-container {
-        max-width: 100%;
-        width: 100%;
-        margin-top: 3em;
-    }
 
-    .cards-container {
-        margin-top: 2em;
-       
-    }
-
-    .card {
-        min-width: 200px;
-    
-    }
-
-    .card img {
-        height: 200px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -200,14 +111,24 @@ right: 5em;
         padding: 10px 20px;
     }
 
-    .card {
-        min-width: 120px;
-    }
-
-    .card img {
-        height: 150px;
-    }
+    
 }
+.banner-content button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #a5984b;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 249);
+    cursor: pointer;
+    border-radius: 30px 50px 60px 120px;
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
 
 @media (max-width: 480px) {
     .banner-container {
@@ -228,90 +149,58 @@ right: 5em;
         padding: 8px 16px;
         color: rgb(32, 70, 34);
     }
+   
 
-    .card {
-        min-width: 100px;
-    }
-
-    .card img {
-        height: 120px;
-    }
 }
-/* Ajustes generales */
+/* Estilos generales */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .card {
-    min-width: 200px; /* Ajusta el ancho mínimo general si es necesario */
-    margin-right: 15px; /* Espacio entre tarjetas */
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    flex: 1 1 220px; /* Ajusta el tamaño mínimo de las tarjetas */
+    max-width: 200%; /* Ajusta el tamaño máximo de las tarjetas */
     background-color: white;
     text-align: center;
+    border-bottom: 2px solid #32CD32;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    height: 250px; /* Ajusta la altura de la imagen para pantallas grandes */
+    height: 200px; /* Reduce la altura de la imagen */
     object-fit: cover;
-    border-bottom: 2px solid #32CD32; /* Verde Lima */
+    border-bottom: 2px solid #32CD32;
 }
 
 .card-text {
-    padding: 15px;
-    font-size: 18px;
+    padding: 10px; /* Reduce el padding */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
     font-weight: bold;
     color: #333;
 }
 
-/* Ajustes para tablets (pantallas entre 768px y 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .card {
-        min-width: 250px; /* Aumentar el ancho mínimo en tablets */
-    }
-
-    .card img {
-        height: 270px; /* Aumentar la altura de la imagen en tablets */
-    }
-
-    .card-text {
-        padding: 20px; /* Aumentar el espaciado interno */
-        font-size: 20px; /* Aumentar el tamaño de la fuente */
-    }
-}
-
-/* Ajustes para móviles (pantallas menores a 768px) */
+/* Ajustes para móviles y tablets */
 @media (max-width: 768px) {
     .card {
-        min-width: 220px; /* Aumentar el ancho mínimo en móviles */
+        flex: 1 1 120px; /* Reduce aún más el tamaño mínimo en dispositivos móviles */
+        max-width: 130%;
+     /* Reduce el tamaño máximo en dispositivos móviles */
     }
-
     .card img {
-        height: 250px; /* Aumentar la altura de la imagen en móviles */
+        height: 130px; /* Reduce aún más la altura de la imagen en dispositivos móviles */
     }
 
     .card-text {
-        padding: 15px; /* Ajustar el espaciado interno */
-        font-size: 18px; /* Ajustar el tamaño de la fuente */
+        font-size: 12px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
     }
 }
-
-/* Estilo general para la sección de tarjetas */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-}
-
-.container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-
-
 
 .country-cards {
     display: grid;
@@ -334,7 +223,7 @@ right: 5em;
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 300px; /* Aumentar altura de la imagen */
+    height: 400px; /* Aumentar altura de la imagen */
     display: flex;
     align-items: flex-end;
 }
@@ -375,7 +264,7 @@ color: #32CD32;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 828px) {
     .country-cards {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas más grandes en tablets */
     }
@@ -384,9 +273,9 @@ color: #32CD32;
     }
 
     .country-card-text {
-        font-size: 3.5em; 
+        font-size: 3.5em; /* Aumentar tamaño del texto en tablets */
         text-align: center;
-        padding: 0.6em;/* Texto un poco más grande en tablets */
+        padding: 0.5em; /* Aumentar el padding para tablets */
     }
 }
 
@@ -400,12 +289,119 @@ color: #32CD32;
         height: 300px; /* Aumentar altura en celulares */
     }
   
-
-
-    
+    .country-card-text {
+        font-size: 5em; /* Aumentar tamaño del texto en celulares */
+        text-align: center;
+        padding: 0.5em; /* Aumentar padding para móviles */
+    }
 
     .country-card-text ul {
         flex-direction: column;
         text-align: center;
     }
+    .texto-1 {
+        font-size: 0.2em;
+
+    }
 }
+
+
+.icons{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.2em;
+   
+}
+.icon img{
+    width: 15vh;
+    border-radius: 20%;
+}
+@media only screen and (max-width: 800px) {
+    .icons .icon {
+        display: none;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content-d {
+    padding: 20px;
+    background-color: #b7d1fc7a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+
+}
+
+.img-fluid {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-texto {
+    flex: 1;
+
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.75rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.highlights {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlights li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #bd53a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #fc4cc7;
+    color: #f0f0f0;
+}
+
+.content-d img{
+    border-radius: 10%;
+}
+
