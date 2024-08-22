@@ -11,6 +11,24 @@ main{
     object-fit: cover;
 }
 
+.botonContacto{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.contenedorBtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.fijacionbtn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
         height: 400px;
