@@ -172,13 +172,13 @@
         <!--Empieza descripción del producto-->
         <section class="col-lg-8">
           <p class="pt-4 mb-0 rounded-top-5">7 noches</p>
-          <h1>Verano en Brasil!!!</h1>
+          <h1 class="fw-bold">Verano en Brasil!!!</h1>
           <!-- Titulos de tabla descriptiva -->
           <article class="table">
             <ul class="nav nav-underline listaTabla" id="tablaDescriptiva" role="tablist">
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link active"
+                  class="nav-link active pb-3"
                   id="detalle-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#detalle-tab-pane"
@@ -192,7 +192,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link anchoPalabra"
+                  class="nav-link anchoPalabra pb-3"
                   id="fechasPrecio-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#fechasPrecio-tab-pane"
@@ -206,7 +206,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  class="nav-link pb-3"
                   id="vuelos-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#vuelos-tab-pane"
@@ -220,7 +220,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  class="nav-link pb-3"
                   id="hoteles-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#hoteles-tab-pane"
@@ -235,6 +235,7 @@
             </ul>
             <!-- Contenido de cada apartado de la tabla -->
             <div class="tab-content" id="tablaDescriptivaContent">
+              <!-- seccion descripcion -->
               <section
                 class="tab-pane fade show active"
                 id="detalle-tab-pane"
@@ -244,7 +245,7 @@
               >
                 <!-- Descripción -->
                 <article>
-                  <h2 class="fw-bold fs-3 mb-3">Descripción</h2>
+                  <h2 class="fw-bold fs-3 my-3">Descripción</h2>
                   <ul class="list-unstyled">
                     <li class="mb-2">
                       <strong>Saliendo desde:</strong> <span>Buenos Aires</span>
@@ -358,7 +359,8 @@
                   </ul>
                 </article>
               </section>
-              <div
+              <!-- seccion fechas y precio -->
+              <section
                 class="tab-pane fade"
                 id="fechasPrecio-tab-pane"
                 role="tabpanel"
@@ -366,7 +368,7 @@
                 tabindex="0"
               >
                 ...
-              </div>
+              </section>
               <div
                 class="tab-pane fade"
                 id="vuelos-tab-pane"
