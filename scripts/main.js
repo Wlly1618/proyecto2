@@ -79,5 +79,3 @@ function scrollRight() {
         document.getElementById('comentario').value = '';
       });
       
-
-    

@@ -15,6 +15,66 @@ body {
  
       
 }
+.contenedor-busqueda {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+    #campoBusqueda {
+        max-width: 100%; 
+       
+    }
+
+    #botonBusqueda {
+        width: 100%; 
+        margin-top: 10px; 
+        margin-top: 1em;
+    }
+}
+
+#campoBusqueda {
+    padding: 12px 15px;
+    width: 200%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#campoBusqueda:focus {
+    outline: none;
+    border-color: #23751b;
+    box-shadow: 0 4px 8px rgba(67, 141, 7, 0.2);
+}
+
+#botonBusqueda {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #225c1d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    margin-top: 1em;
+}
+
+#botonBusqueda:hover {
+    background-color: #1f6112;
+}
+
+
+
+.contenedor-busqueda::after {
+    background: rgba(143, 0, 0, 0.4);
+}
 
 
 .banner-container {
@@ -64,7 +124,7 @@ padding: 0.3em;
 .banner-content button {
     padding: 15px 30px;
     font-size: 16px;
-    background-color: #a5984b; /* Azul Turquesa */
+    background-color: #a5984b; 
     border: none;
     border-radius: 5px;
     color: rgb(255, 255, 249);
@@ -548,7 +608,7 @@ section {
 
 .product-card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 300px;
     height: 350px;
     margin-right: 30px;
     display: flex;
