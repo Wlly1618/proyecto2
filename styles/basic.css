@@ -47,6 +47,14 @@ main{
 .anchoPalabra{
     width: max-content;
 }
+.fechas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.totalNoche{
+    font-size: 12px;
+}
 
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
