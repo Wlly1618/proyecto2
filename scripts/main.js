@@ -53,7 +53,7 @@ function scrollRight() {
         comentarioItem.classList.add('comentario-item');
         
         const comentarioFoto = document.createElement('img');
-        comentarioFoto.src = 'default-avatar.jpg'; // Puedes reemplazar esta imagen con una predeterminada
+        comentarioFoto.src = 'https://i.pinimg.com/564x/25/ee/de/25eedef494e9b4ce02b14990c9b5db2d.jpg'; 
         comentarioFoto.alt = `Foto de ${nombre}`;
         comentarioFoto.classList.add('comentario-foto');
         
@@ -74,7 +74,7 @@ function scrollRight() {
         
         document.getElementById('comentarios-lista').appendChild(comentarioItem);
         
-        // Limpiar los campos del formulario
+        
         document.getElementById('nombre').value = '';
         document.getElementById('comentario').value = '';
       });

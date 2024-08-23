@@ -54,7 +54,7 @@ width: 40%;
 
 }
 
-.banner-content p {
+.banner-content p  {
     font-size: 1.5em;
     margin-bottom: 30px;
     color: rgb(43, 87, 22);
@@ -127,7 +127,7 @@ padding: 0.3em;
         color: rgb(32, 70, 34);
     }
 }
-/* Estilos generales */
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -138,8 +138,8 @@ padding: 0.3em;
 }
 
 .card {
-    flex: 1 1 120px; /* Ajusta el tamaño mínimo de las tarjetas */
-    max-width: 200%; /* Ajusta el tamaño máximo de las tarjetas */
+    flex: 1 1 120px; 
+    max-width: 200%; 
     background-color: white;
     text-align: center;
     border-bottom: 2px solid #32CD32;
@@ -149,31 +149,46 @@ padding: 0.3em;
 
 .card img {
     width: 100%;
-    height: 200px; /* Reduce la altura de la imagen */
+    height: 200px; 
     object-fit: cover;
     border-bottom: 2px solid #32CD32;
 }
 
 .card-text {
-    padding: 10px; /* Reduce el padding */
-    font-size: 14px; /* Reduce el tamaño de la fuente */
-    font-weight: bold;
+    padding: 10px;
+    font-size: 14px; 
+    
+    
+}
+.card-text a {
+    text-decoration: none;
     color: #333;
+    font-weight: bold;
+}
+.card-text a:hover {
+    text-decoration: none;
+    color: #ffebeb;
+    background-color: #5fbb5f;
+    font-weight: bold;
+    padding: 0.5em;
+    transition: 0.5s;
+    border-radius: 1em;
+
 }
 
-/* Ajustes para móviles y tablets */
+
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 120px; /* Reduce aún más el tamaño mínimo en dispositivos móviles */
+        flex: 1 1 120px;
         max-width: 130%;
-     /* Reduce el tamaño máximo en dispositivos móviles */
+    
     }
     .card img {
-        height: 130px; /* Reduce aún más la altura de la imagen en dispositivos móviles */
+        height: 130px; 
     }
 
     .card-text {
-        font-size: 12px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        font-size: 12px; 
     }
 }
 
@@ -277,33 +292,32 @@ background-color: #28702ede;
 
 @media (max-width: 828px) {
     .country-cards {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas más grandes en tablets */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
     .country-card-image {
-        height: 350px; /* Aumentar altura en tablets */
+        height: 350px; 
     }
 
     .country-card-text {
-        font-size: 3.5em; /* Aumentar tamaño del texto en tablets */
-        text-align: center;
-        padding: 0.5em; /* Aumentar el padding para tablets */
+        font-size: 3.5em; 
+        padding: 0.5em; 
     }
 }
 
 /* Media Queries para Celulares */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .country-cards {
-        grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+        grid-template-columns: 1fr; 
     }
 
     .country-card-image {
-        height: 180px; /* Aumentar altura en celulares */
+        height: 180px; 
     }
   
     .country-card-text {
-        font-size: 1em; /* Aumentar tamaño del texto en celulares */
+        font-size: 1em;
         text-align: center;
-        padding: 2em; /* Aumentar padding para móviles */
+        padding: 2em; 
     }
 
     .country-card-text ul {
@@ -493,7 +507,7 @@ background-color: #28702ede;
     right: 0;
   }
 
-  /* Estilos Generales */
+
 section {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -524,8 +538,8 @@ section {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    max-height: 350px; /* Asegúrate de que el contenedor no se expanda verticalmente */
-    overflow-y: hidden; /* Evita el scroll vertical */
+    max-height: 350px; 
+    overflow-y: hidden; 
 }
 
 .product-container::-webkit-scrollbar {
@@ -540,16 +554,16 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff; /* Fondo blanco para un look limpio */
-    border-radius: 10px; /* Bordes redondeados para un toque moderno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para mayor profundidad */
-    overflow: hidden; /* Asegura que el contenido no desborde */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves para hover */
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Elevación al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .product-image {
@@ -563,11 +577,11 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s; /* Suave zoom en hover */
+    transition: transform 0.3s; 
 }
 
 .product-card:hover .product-thumb {
-    transform: scale(1.05); /* Zoom en la imagen al pasar el ratón */
+    transform: scale(1.05); 
 }
 
 .card-btn {
@@ -580,8 +594,8 @@ section {
     text-transform: uppercase;
     border: none;
     outline: none;
-    background-color: #ff6f61; /* Color tropical vibrante */
-    border-radius: 25px; /* Botón redondeado */
+    background-color: #ff6f61; 
+    border-radius: 25px;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
     opacity: 0;
@@ -595,23 +609,23 @@ section {
 }
 
 .card-btn:hover {
-    background-color: #ff3b30; /* Color de hover más intenso */
-    color: #ffffff; /* Color del texto en hover */
+    background-color: #ff3b30; 
+    color: #ffffff;
 }
 
 .product-info {
     width: 100%;
     height: 30%;
-    padding: 15px; /* Más espacio alrededor del contenido */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    padding: 15px; 
+    box-sizing: border-box; 
 }
 
 .product-brand {
-    font-size: 20px; /* Ajuste del tamaño del texto */
-    margin-bottom: 10px; /* Espaciado inferior reducido */
-    font-family: 'Montserrat', sans-serif; /* Fuente moderna y legible */
-    font-weight: 600; /* Peso de fuente más fuerte */
-    color: #333; /* Color de texto más oscuro para mejor legibilidad */
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    color: #333; 
     text-align: center;
 }
 
@@ -715,7 +729,7 @@ section {
   
   #form-comentarios button {
     padding: 15px;
-    background-color: #40E0D0; /* Azul Turquesa */
+    background-color: #40E0D0; 
     color: #fff;
     border: none;
     border-radius: 90px;
@@ -725,10 +739,10 @@ section {
   }
   
   #form-comentarios button:hover {
-    background-color: #32CD32; /* Verde Lima */
+    background-color: #32CD32;
   }
   
-  .accommodations-section h2 {
+  .Alojamientos-section h2 {
     padding: 20px;
     text-align: start;
     font-size: 2.2em;
@@ -741,14 +755,14 @@ section {
     font-style: normal; 
 }
 
-.accommodation-list {
+.Alojamientos-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.accommodation-card {
+.Alojamientos-card {
     width: 300px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -757,27 +771,27 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.accommodation-card:hover {
+.Alojamientos-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.accommodation-image img {
+.Alojamientos-image img {
     width: 100%;
     height: auto;
 }
 
-.accommodation-info {
+.Alojamientos-info {
     padding: 15px;
 }
 
-.accommodation-info h3 {
+.Alojamientos-info h3 {
     margin: 0;
     font-size: 1.4em;
     color: #333;
 }
 
-.accommodation-info p {
+.Alojamientos-info p {
     color: #666;
 }
 
