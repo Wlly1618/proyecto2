@@ -79,7 +79,7 @@ main {
 #bodyError {
   height: 100vh;
   margin: 0;
-  background: var(--dorado-suave);
+  background: var(--gris-oscuro);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,20 +93,20 @@ main {
 }
 
 #tituloError {
-  color: var(--gris-oscuro);
+  color: var(--dorado-suave);
   margin-top: 260px;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
   margin-bottom: 0;
-  text-shadow: 0px 2px 2px var(--gris-oscuro);
+  text-shadow: 0px 2px 2px black;
 }
 
 #textoError {
-  color: var(--gris-oscuro);
+  color: var(--dorado-suave);
   font-size: 30px;
   font-weight: bold;
-  text-shadow: 0px 2px 2px var(--gris-oscuro);
+  text-shadow: 0px 2px 2px black;
 }
 
 #avion {
@@ -122,18 +122,18 @@ main {
 }
 
 #avion-path {
-  fill: var(--gris-oscuro);
+  fill: var(--naranja-purpura);
 }
 .boton {
   display: inline-block;
   padding: 10px 20px;
   background-color: var(--naranja-purpura);
-  color: var(--gris-oscuro);
+  color: var(--blanco-hueso);
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px var(--gris-oscuro);
+  box-shadow: 0 3px 9px black;
 }
 
 .boton:hover {
