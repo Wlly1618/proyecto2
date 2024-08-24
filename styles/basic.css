@@ -1,77 +1,188 @@
-:root{
-    --rosa-coral: #ff6f61;
-    --naranja-purpura: #ff4500;
-    --dorado-suave: #ffd700;
-    --gris-oscuro: #4d5151;
-    --blanco-hueso: #e6e4e2;
+:root {
+  --rosa-coral: #ff6f61;
+  --naranja-purpura: #ff4500;
+  --dorado-suave: #ffd700;
+  --gris-oscuro: #4d5151;
+  --blanco-hueso: #e6e4e2;
 }
-
+/* estilos generales */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
-    background-color: var(--blanco-hueso);
+  flex-grow: 1;
 }
 
 .scrollable-table {
-    height: 300px;
-    width: 100%;
-    overflow-y: auto;
+  height: 300px;
+  width: 100%;
+  overflow-y: auto;
 }
-.fondoNavFooter{
-    background-color: var(--gris-oscuro);
+/* estilos nav y footer */
+.fondoNavFooter {
+  background-color: var(--gris-oscuro);
 }
-.logoNav{
-    max-height: 40px;
-    width: auto;
+.logoNav {
+  max-height: 40px;
+  width: auto;
 }
-.iconosLetrasNav{
-    color: var(--dorado-suave) !important;
+.iconosLetrasNav {
+  color: var(--dorado-suave) !important;
 }
-.iconosLetrasNav:hover{
-    text-shadow: 0px 4px 8px var(--naranja-purpura);
-    transform: translateY(-5px);
+.iconosLetrasNav:hover {
+  text-shadow: 0px 4px 8px var(--naranja-purpura);
+  transform: translateY(-5px);
 }
-.titulosFooter{
-    color: var(--dorado-suave);
+.titulosFooter {
+  color: var(--dorado-suave);
 }
-.textosFooter{
-    color: var(--blanco-hueso);
+.textosFooter {
+  color: var(--blanco-hueso);
 }
-.textosFooter:hover{
-    cursor: pointer;
+.textosFooter:hover {
+  cursor: pointer;
 }
-.hrFooter{
-    color: var(--dorado-suave);
-    font-weight: bold;
+.hrFooter {
+  color: var(--dorado-suave);
+  font-weight: bold;
+}
+/* estilos pagina administrador */
+.titulos {
+  color: var(--naranja-purpura);
+}
+.subtitulos {
+  color: var(--rosa-coral);
+  font-weight: bold;
+}
+#botonNuevoPaquete {
+  background-color: var(--dorado-suave);
+  border: none;
+  color: var(--gris-oscuro);
+  font-weight: bold;
+}
+#botonNuevoPaquete:hover {
+  box-shadow: 0px 4px 9px var(--gris-oscuro);
+}
+#botonBuscar {
+  background-color: var(--gris-oscuro);
+  border: none;
+  color: var(--dorado-suave);
+  font-weight: bold;
+}
+#botonBuscar:hover {
+  box-shadow: 0px 4px 9px var(--gris-oscuro);
+}
+/* estilos pagina error404 */
+#bodyError {
+  height: 100vh;
+  margin: 0;
+  background: var(--dorado-suave);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+#contenedorAvion {
+  text-align: center;
+  padding: 20px;
+  position: relative;
 }
-.titulos{
-    color: var(--naranja-purpura);
+
+#tituloError {
+  color: var(--gris-oscuro);
+  margin-top: 260px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-shadow: 0px 2px 2px var(--gris-oscuro);
 }
-.subtitulos{
-    color: var(--rosa-coral);
-    font-weight: bold;
+
+#textoError {
+  color: var(--gris-oscuro);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 2px 2px var(--gris-oscuro);
 }
-#botonNuevoPaquete{
-    background-color: var(--dorado-suave);
-    border: none;
-    color: var(--gris-oscuro);
-    font-weight: bold;
+
+#avion {
+  color: var(--gris-oscuro);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  transform: translateY(-50%) rotate(270deg);
+  animation: fly-horizontal 10s linear infinite;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
-#botonNuevoPaquete:hover{
-    box-shadow: 0px 4px 9px var(--gris-oscuro);
+
+#avion-path {
+  fill: var(--gris-oscuro);
 }
-#botonBuscar{
-    background-color: var(--gris-oscuro);
-    border: none;
-    color: var(--dorado-suave);
-    font-weight: bold;
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--naranja-purpura);
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px var(--gris-oscuro);
 }
-#botonBuscar:hover{
-    box-shadow: 0px 4px 9px var(--gris-oscuro);
+
+.boton:hover {
+  background-color: var(--gris-oscuro);
+  color: var(--naranja-purpura);
+  box-shadow: 0 4px 6px var(--naranja-purpura);
+}
+
+@keyframes fly-horizontal {
+  0% {
+    transform: translateY(-50%) translateX(0) rotate(270deg);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-100vw) rotate(270deg);
+  }
+}
+
+@media (max-width: 768px) {
+  #bodyError {
+    align-items: center;
+  }
+
+  #contenedorAvion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #tituloError {
+    margin-top: 0;
+  }
+
+  #avion {
+    width: 180px;
+    height: 180px;
+    left: 50%;
+    top: auto;
+    bottom: -180px;
+    transform: translateX(-50%) rotate(0deg);
+    animation: fly-vertical 8s linear infinite;
+  }
+
+  @keyframes fly-vertical {
+    0% {
+      bottom: -180px;
+    }
+    100% {
+      bottom: 100vh;
+    }
+  }
 }
