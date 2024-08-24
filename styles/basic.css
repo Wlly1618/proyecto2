@@ -82,6 +82,11 @@ main{
     gap: 20px;
 }
 
+.imgComentarios{
+    width: 60px;
+    height: 60px;
+}
+
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
         height: 400px;
@@ -92,5 +97,10 @@ main{
     .imgDetalle{
         height: 450px;
         object-position: 50% 10%; 
+    }
+
+    .posicionComentarios{
+        position: sticky;
+        top: 0;
     }
 }
