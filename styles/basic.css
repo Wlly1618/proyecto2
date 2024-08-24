@@ -94,7 +94,7 @@ main {
 
 #tituloError {
   color: var(--dorado-suave);
-  margin-top: 260px;
+  margin-top: 265px;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
@@ -111,8 +111,8 @@ main {
 
 #avion {
   color: var(--gris-oscuro);
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   position: absolute;
   top: 30%;
   left: 100%;
@@ -168,8 +168,8 @@ main {
   }
 
   #avion {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     left: 50%;
     top: auto;
     bottom: -180px;
