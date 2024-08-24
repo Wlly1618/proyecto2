@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="proyecto final de modulo donde se realizara una practica de CRUD de una Agencia de Viajes"
+    />
+    <meta name="keywords" content="CRUD, viajes, practica, JS" />
+    <meta
+      name="author"
+      content="Felicitas Rallé, Milagros Antoni, Luis Leonardo Reartez, Oscar Alfredo Ventura, Wilfredo Joel Serrano"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/basic.css" />
+    <title>CRUD Agencia de Viajes</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">(logo)</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav text-center">
+              <a class="nav-link active mx-4" aria-current="page" href="#">
+                <i class="bi bi-box-arrow-in-right"></i><br />Login
+              </a>
+              <a class="nav-link mx-4" href="#">
+                <i class="bi bi-gift"></i><br />Paquetes
+              </a>
+              <!-- autos y circuitos llevaran a la pagina del error 404 -->
+              <a class="nav-link mx-4" href="#">
+                <i class="bi bi-car-front"></i><br />Autos
+              </a>
+              <a class="nav-link mx-4" href="#">
+                <i class="bi bi-geo-alt"></i><br />Circuitos
+              </a>
+              <a class="nav-link mx-4" href="#">
+                <i class="bi bi-people"></i><br />Nosotros
+              </a>
+              <!-- administrador solo aparecera al logearse -->
+              <a class="nav-link mx-4" href="#">
+                <i class="bi bi-gear"></i><br />Administrador
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid">
+      <section class="row">
+        <div class="my-3 d-none d-lg-block">
+          <ul class="list-group list-unstyled d-flex flex-row">
+            <li>
+              <a class="text-decoration-none link-underline-opacity-25 link-underline-opacity-100-hover" href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <span class="px-2"> > </span>
+            </li>
+            <li>
+              <span>Aventura en la Patagonia</span>
+            </li>
+          </ul>
+        </div>
+        <div class="btnAtras ps-2 d-lg-none">
+          <a class="rounded-circle bg-light bg-opacity-50 fs-1" href="#"><i class="bi bi-arrow-left-short text-dark"></i></a>
+        </div>
+        <div class="col-lg-8 px-0">
+          <!-- Carouesel de img del destino -->
+          <section>
+            <div id="carouselDetalle" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselDetalle"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselDetalle"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselDetalle"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://images.hola.com/imagenes/viajes/20200429166916/patagonia-argentina-chile-maravillas-desde-mi-pantalla/0-817-762/patagonia-chile-argentina-t.jpg"
+                    class="d-block w-100 imgDetalle"
+                    alt="Cristo Redentor con un paisaje de fondo"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Aerotrip: Te Lleva a Tu Aventura Patagónica</h5>
+                    <p>
+                        Descubre los paisajes más impresionantes de Argentina. Desde glaciares majestuosos hasta montañas imponentes, Aerotrip te lleva a una aventura inolvidable en la Patagonia.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="http://1.bp.blogspot.com/-8bkW1Lbxlrs/TtzWdjGKpRI/AAAAAAAAAdo/cY--mA8vrkU/s1600/home3_g.jpg"
+                    class="d-block w-100 imgDetalle"
+                    alt="Camboriu"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Patagonia: Donde la Tierra se Encuentra con el Cielo</h5>
+                    <p>
+                        Déjate llevar por la belleza indescriptible de la Patagonia. Con Aerotrip, cada rincón es una nueva historia por contar. ¡Tu próxima aventura te espera!
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://criticasur.com.ar/uploads/noticias/5/20190217051741_ecocamp.jpg"
+                    class="d-block w-100 imgDetalle"
+                    alt="playa de Brasil"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>No lo pienses más... Y conocé la Patagonia junto a Aerotrip</h5>
+                    <p>
+                      Descubra la comodidad y el lujo mientras explora los mejores
+                      destinos con nuestros paquetes de viajes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselDetalle"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselDetalle"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+          <!--Empieza descripción del producto-->
+          <section class="container-fluid border-end">
+            <p class="pt-4 mb-0 rounded-top-5">7 noches</p>
+            <h1 class="fw-bold">Aventura en la Patagonia</h1>
+            <!-- Titulos de tabla descriptiva -->
+            <article class="table">
+              <ul class="nav nav-underline listaTabla" id="tablaDescriptiva" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active pb-3"
+                    id="detalle-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#detalle-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="detalle-tab-pane"
+                    aria-selected="true"
+                  >
+                    Descripción
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link anchoPalabra pb-3"
+                    id="fechasPrecio-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#fechasPrecio-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="fechasPrecio-tab-pane"
+                    aria-selected="false"
+                  >
+                    Fechas y precios
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link pb-3"
+                    id="vuelos-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#vuelos-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="vuelos-tab-pane"
+                    aria-selected="false"
+                  >
+                    Vuelos
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link pb-3"
+                    id="hoteles-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#hoteles-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="hoteles-tab-pane"
+                    aria-selected="false"
+                  >
+                    hoteles
+                  </button>
+                </li>
+              </ul>
+              <!-- Contenido de cada apartado de la tabla -->
+              <div class="tab-content" id="tablaDescriptivaContent">
+                <!-- seccion descripcion -->
+                <section
+                  class="tab-pane fade show active border-bottom"
+                  id="detalle-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="detalle-tab"
+                  tabindex="0"
+                >
+                  <!-- Descripción -->
+                  <h2 class="fw-bold mt-3 mb-0">Descripción</h2>
+                  <article>
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <strong>Saliendo desde:</strong> <span>Tucumán</span>
+                      </li>
+                      <li class="mb-2">
+                        <strong>Destino:</strong> <span>Brasil</span>
+                      </li>
+                      <li>
+                        <strong>Fecha de salida:</strong>
+                        <span>Jue. 02/01/25 al Jue. 09/01/25</span>
+                      </li>
+                    </ul>
+                  </article>
+                  <!-- acordion con detalle de precio -->
+                  <article class="my-3">
+                    <div class="accordion" id="detallePrecio">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button ps-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                          >
+                            <span class="fs-6 fw-bold">Detalle de precio</span>
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#detallePrecio"
+                        >
+                          <div class="accordion-body px-1">
+                            <ul class="list-group list-unstyled">
+                              <li class="d-flex justify-content-between">
+                                <strong>Precio por persona</strong>
+                                <span class="fs-2 fw-bold"
+                                  ><span class="fs-5">$</span>1.528.000</span
+                                >
+                              </li>
+                              <li class="d-flex justify-content-between mb-3">
+                                <div class="d-flex flex-column">
+                                  <strong>Precio total para 2 personas</strong>
+                                  <span>(1 hab. doble)</span>
+                                </div>
+                                <span class="fs-6 fw-bold py-2"
+                                  ><span class="fs-6">$</span>3.056.000</span
+                                >
+                              </li>
+                              <li class="d-flex justify-content-center mb-3">
+                                <span class="fs-6 fw-bold"
+                                  >Incluye Impusto PAIS + AFIP</span
+                                >
+                              </li>
+                              <li class="">
+                                <p class="fs- fw-bold border-bottom shadow">
+                                  Precio en USD: $2.020
+                                  <span class="text-primary">*</span>
+                                </p>
+                                <div>
+                                  <span class="text-primary fw-bold"
+                                    >*Este paquete permite pago en USD</span
+                                  >
+                                  <p>
+                                    Los impuestos PAIS + AFIP no aplican con esta
+                                    modalidad de pago
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- articulo El precio incluye -->
+                  <article class="mb-5 border-bottom shadow">
+                    <h2 class="fw-bold">El precio incluye</h2>
+                    <ul class="list-group list-unstyled my-3">
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span class="ms-1"
+                          >Pasaje Aereo TUC/RIO/TUC con Aerotrip</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span class="ms-1">Incluye equipaje de mano</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span class="ms-1"
+                          >Traslado Aeropuerto/Hotel/Aeropuerto</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span class="ms-1"
+                          >7 noches de alojamiento con desayuno</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle"></i>
+                        <span class="ms-1"
+                          >Asistencia al viajero Coris Global</span
+                        >
+                      </li>
+                    </ul>
+                  </article>
+                </section>
+                <!-- seccion fechas y precio -->
+                <section
+                  class="tab-pane fade border-bottom"
+                  id="fechasPrecio-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="fechasPrecio-tab"
+                  tabindex="0"
+                >
+                <h2 class="fw-bold mt-3 mb-0">Salidas disponibles</h2>
+                  <article class="fechas">
+                    <div class="position-relative py-1 px-1 text-center text-bg-secondary border border-secondary rounded-4">
+                      <span class="fw-bold my-4">ENE 2025</span> <svg width="1em" height="1em" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                      <div class="bg-light text-dark px-3 d-flex flex-column rounded-bottom-4">
+                        <span>A partir de</span>
+                        <span class="fw-bold fs-5">$1.528.000</span>
+                      </div>
+                    </div>
+                    <div class="position-relative py-1 px-1 text-center text-bg-secondary border border-secondary rounded-4">
+                      <span class="fw-bold my-4">FEB 2025</span> <svg width="1em" height="1em" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                      <div class="bg-light text-dark px-3 d-flex flex-column rounded-bottom-4">
+                        <span>A partir de</span>
+                        <span class="fw-bold fs-5">$1.528.000</span>
+                      </div>
+                    </div>
+                  </article>
+                  <ul class="list-group list-unstyled my-3">
+                    <li class="mb-3 py-3 px-2 border rounded-4 shadow">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div>
+                            <span class="totalNoche fw-bold">Salida:</span> <span class="totalNoche">02/01/2025</span>
+                          </div>
+                          <div>
+                            <span class="totalNoche fw-bold">Regreso:</span> <span class="totalNoche">09/01/2025</span>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                          <span class="totalNoche">7 NOCHES</span>
+                          <span class="fw-bold fs-4">$1.528.000</span>
+                          <span class="totalNoche">Precio por persona</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3 py-3 px-2 border rounded-4 shadow">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div>
+                            <span class="totalNoche fw-bold">Salida:</span> <span class="totalNoche">09/01/2025</span>
+                          </div>
+                          <div>
+                            <span class="totalNoche fw-bold">Regreso:</span> <span class="totalNoche">16/01/2025</span>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                          <span class="totalNoche">7 NOCHES</span>
+                          <span class="fw-bold fs-4">$1.528.000</span>
+                          <span class="totalNoche">Precio por persona</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3 py-3 px-2 border rounded-4 shadow">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div>
+                            <span class="totalNoche fw-bold">Salida:</span> <span class="totalNoche">16/01/2025</span>
+                          </div>
+                          <div>
+                            <span class="totalNoche fw-bold">Regreso:</span> <span class="totalNoche">23/01/2025</span>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                          <span class="totalNoche">7 NOCHES</span>
+                          <span class="fw-bold fs-4">$1.528.000</span>
+                          <span class="totalNoche">Precio por persona</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3 py-3 px-2 border rounded-4 shadow">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div>
+                            <span class="totalNoche fw-bold">Salida:</span> <span class="totalNoche">23/01/2025</span>
+                          </div>
+                          <div>
+                            <span class="totalNoche fw-bold">Regreso:</span> <span class="totalNoche">30/01/2025</span>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                          <span class="totalNoche">7 NOCHES</span>
+                          <span class="fw-bold fs-4">$1.528.000</span>
+                          <span class="totalNoche">Precio por persona</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3 py-3 px-2 border rounded-4 shadow">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <div>
+                            <span class="totalNoche fw-bold">Salida:</span> <span class="totalNoche">30/01/2025</span>
+                          </div>
+                          <div>
+                            <span class="totalNoche fw-bold">Regreso:</span> <span class="totalNoche">06/02/2025</span>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column text-end">
+                          <span class="totalNoche">7 NOCHES</span>
+                          <span class="fw-bold fs-4">$1.528.000</span>
+                          <span class="totalNoche">Precio por persona</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <!-- seccion vuelos -->
+                <section
+                  class="tab-pane fade border-bottom"
+                  id="vuelos-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="vuelos-tab"
+                  tabindex="0"
+                >
+                <h2 class="fw-bold mt-3 mb-0">Vuelos</h2>
+                <article>
+                  <p class="mb-0 fw-bold">Tramo 1</p>
+                  <div class="datosVuelo1"> 
+                    <div>
+                      <span>Tucumán</span> <i class="bi bi-arrow-right-short"></i> <span>Río de Janeiro</span>
+                    </div>
+                    <div>
+                      Jue 02/01/2025
+                    </div>
+                  </div>
+                  <div class="mt-2 mb-3 rounded-4 border py-2 px-3 shadow">
+                    <div class="datosVuelo1 border-bottom">
+                      <i class="bi bi-airplane fs-1"></i>
+                      <div class="datosVuelo">
+                        <div>
+                          <p class="mb-0 text-body-tertiary text-end fw-bold fs-6">TUC</p>
+                          <p class="fw-bold fs-6">06:20</p>
+                        </div>
+                        <div class="text-body-tertiary text-center duracionViaje">
+                          <p class="mb-0 border-bottom">2h 55min</p>
+                          <p>Directo</p>
+                        </div>
+                        <div>
+                          <p class="mb-0 text-body-tertiary text-start fw-bold fs-6">RIO</p>
+                          <p class="fw-bold fs-6">09:15</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center my-2 text-body-tertiary">
+                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3"></i>
+                    </div>
+                  </div>
+                </article>
+                <article>
+                  <p class="mb-0 fw-bold">Tramo 2</p>
+                  <div class="datosVuelo1"> 
+                    <div>
+                      <span>Río de Janeiro</span> <i class="bi bi-arrow-right-short"></i> <span>Tucumán</span>
+                    </div>
+                    <div>
+                      Jue 09/01/2025
+                    </div>
+                  </div>
+                  <div class="mt-2 mb-3 rounded-4 border py-2 px-3 shadow">
+                    <div class="datosVuelo1 border-bottom">
+                      <i class="bi bi-airplane fs-1"></i>
+                      <div class="datosVuelo">
+                        <div>
+                          <p class="mb-0 text-body-tertiary text-end fw-bold fs-6">RIO</p>
+                          <p class="fw-bold fs-6">18:15</p>
+                        </div>
+                        <div class="text-body-tertiary text-center duracionViaje">
+                          <p class="mb-0 border-bottom">3h 25min</p>
+                          <p>Directo</p>
+                        </div>
+                        <div>
+                          <p class="mb-0 text-body-tertiary text-start fw-bold fs-6">TUC</p>
+                          <p class="fw-bold fs-6">21:40</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center my-2 text-body-tertiary">
+                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3"></i>
+                    </div>
+                  </div>
+                </article>
+                </section>
+                <!-- seccion hoteles -->
+                <section
+                  class="tab-pane border-bottom fade"
+                  id="hoteles-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="hoteles-tab"
+                  tabindex="0"
+                >
+                <!--Hoteles-->
+                <h2 class="fw-bold mt-3 mb-0">Hoteles</h2>
+                <article class="contenedorHotel rounded-3 w-100 mb-5 shadow">
+                  <div class="">
+                    <img src="https://th.bing.com/th/id/R.8595bb1d1883b0422b3190af4261e388?rik=7DYnRgv51HT6Iw&amp;riu=http%3a%2f%2fdecoracaopracasa.com%2fwp-content%2fuploads%2f2012%2f10%2fcopacabana-palace-rio-de-janeiro--e1349690637985.jpg&amp;ehk=GZ4xe5spkek8ZXZ%2fO%2b5gjdkMB6denE5I7WDM5jMuY2Y%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" class="imagenHotel h-100 rounded-start-3" alt="">     
+                  </div>     
+                  <div class="d-flex flex-column">
+                      <h2 class="fs-4">Hotel Copacabana Palace (Río de Janeiro)</h2>
+                      <h5 class="fs-6">Código: #822272</h5>
+                     <div>
+                       <i class="bi bi-star-fill text-warning"></i>
+                       <i class="bi bi-star-fill text-warning"></i>
+                       <i class="bi bi-star-fill text-warning"></i>
+                       <i class="bi bi-star-fill text-warning"></i>
+                       <i class="bi bi-star"></i> 
+                     </div>
+                        <p class="my-1">Puntuación</p>
+                    <div class="d-flex align-items-center">
+                      <span class="btn btn-success p-1">9.5/10</span>
+                      <p class="mb-0">Excelente</p>
+                  </div>
+                  <h3 class="mt-2">$700.343</h3>
+                </div>
+              </article>
+                </section>
+              </div>
+            </article>
+          </section>
+        </div>
+        <!-- seccion comentarios -->
+        <section class="container col-lg-4 mb-3 border-bottom" id="Experiencias">
+          <div class="row posicionComentarios">
+            <div class="col-lg-12">
+              <div>
+                <h2>Opiniones de Nuestros Viajeros</h2>
+                <p class="lead">Nos enorgullece ofrecer experiencias de viaje inolvidables. Pero no tomes solo nuestra palabra; escucha lo que nuestros clientes tienen que decir. Estos son algunos de los comentarios que hemos recibido de personas que han vivido aventuras excepcionales con nosotros. ¡Tu próxima historia de viaje podría ser la próxima en aparecer aquí!</p>
+              </div>
+            </div>
+            <div class="col-lg-12 my-3">
+              <div class="mb-4">
+                <div class="d-flex align-items-start mb-3 border py-3 px-2">
+                  <img src="https://i.pinimg.com/564x/1c/43/4d/1c434d1640f9572e2ac7be5c6bac9348.jpg" alt="Foto de Juan" class="comentario-foto rounded-circle me-3 img-fluid imgComentarios">
+                  <div class="mb-3">
+                    <h5 class="mb-1">Juan Pérez</h5>
+                    <p class="mb-0">¡Excelente experiencia! El viaje superó todas mis expectativas.</p>
+                  </div>
+                </div>
+                <div class="comentario-item d-flex align-items-start mb-3 border py-3 px-2">
+                  <img src="https://i.pinimg.com/564x/1c/43/4d/1c434d1640f9572e2ac7be5c6bac9348.jpg" alt="Foto de María" class="comentario-foto rounded-circle me-3 img-fluid imgComentarios">
+                  <div class="comentario-texto">
+                    <h5 class="mb-1">María García</h5>
+                    <p class="mb-0">Un servicio increíble, definitivamente viajaría con esta agencia otra vez.</p>
+                  </div>
+                </div>
+              </div>
+              <form id="form-comentarios">
+                <div class="mb-3">
+                  <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+                </div>
+                <div class="mb-3">
+                  <textarea id="comentario" class="form-control" placeholder="Escribe tu comentario" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Agregar Comentario</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Seccion politicas de la empresa -->
+        <section class="col-lg-12 text-body-tertiary">
+          <article>
+            <h3>Políticas de cancelación</h3>
+            <p>
+              El pasajero puede desistir de los servicios contratados. Se
+              aplicará la siguiente penalización:
+            </p>
+            <ul>
+              <li>
+                Aereos: una vez emitidos no admiten devolución ni son
+                reembolsables. Reprogramaciones sujetas a consulta.
+              </li>
+              <li>
+                Servicios terrestres: Cancelación o reprogramación sujeta a las
+                políticas de cada prestador del servicio, sujeto a consulta.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>Legales</h3>
+            <p>
+              Tarifas por persona en base habitación doble, sujetas a
+              modificación según disponibilidad al momento de realizar la
+              reserva. Válidas para pasajeros argentinos. Tarifas no válidas
+              para fechas especiales o feriados, excepto que se indique lo
+              contrario. Todos nuestros paquetes incluyen los servicios
+              especificados, impuestos aéreos, Iva, gastos de reserva y
+              administrativos, y percepciones e impuesto PAIS correspondientes
+              cuando aplica. No incluidos: los servicios no especificados tales
+              como gastos personales, propinas, taxs hoteleras cuando aplica,
+              etc. Pasajes aéreos en cabina económica, política de equipaje
+              según se indica. La asignación de asientos estará sujeta a las
+              políticas de la compañía aérea, todas las reservas de vuelos están
+              sujetas a reprogramaciones y/o cancelaciones por parte de la
+              aerolínea. Los horarios de check in y check out según las
+              condiciones de cada hotel. Es resposanibilidad del pasajero
+              presentar la documentación correspondiente y en regla al momento
+              de viajar.
+            </p>
+            <ul class="list-unstyled">
+                <li>
+                    Operador: Aerotrip SRL
+                </li>
+                <li>
+                    Legajo: 6969
+                </li>
+                <li>
+                    CUIT: 30-54684561-0
+                </li>
+            </ul>
+          </article>
+        </section>
+      </section>
+      <!-- Seccion botones fijos -->
+        <section class="container-fluid py-3 bg-light fijacionbtn">
+          <article class="contenedorBtn">
+            <div class="w-50 botonContacto">
+              <a class="textobtn btn btn-outline-primary rounded-pill fw-bold py-2 fs-3" href="#"><span class="fs-2"><i class="bi bi-airplane me-2"></i></span>Reservar viaje</a>
+            </div>
+            <div class="w-50 botonContacto">
+              <a class="textobtn btn btn-success rounded-pill fw-bold py-2 fs-3" href="#"> <span class="fs-2"><i class="bi bi-whatsapp me-2"></i></span>Contactanos</a>
+            </div>
+          </article>
+        </section>
+    </main>
+    <footer class="bg-body-tertiary">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <h5>Donde Encontranos</h5>
+            <p>123 Calle Principal, San Miguel de Tucumán, Argentina</p>
+            <p>Teléfono: +1 (123) 456-7890</p>
+            <p>Email: info@agenciaviajes.com</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Confianza en tus Reservas</h5>
+            <ul class="list-unstyled">
+              <li>Terminos y Condiciones</li>
+              <li class="mt-2">Política de Privacidad</li>
+              <li class="mt-2">Ofertas</li>
+              <li class="mt-2">Promociones Vigentes</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Nuestras redes</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-instagram mx-2"></i>Instagram</li>
+              <li class="mt-2"><i class="bi bi-facebook mx-2"></i>Facebook</li>
+              <li class="mt-2"><i class="bi bi-twitter-x mx-2"></i>Twitter</li>
+              <li class="mt-2"><i class="bi bi-tiktok mx-2"></i>Tiktok</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="text-center">
+          <p class="mb-0">
+            &copy; 2024 (Nombre de la agencia). Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
