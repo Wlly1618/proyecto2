@@ -70,6 +70,18 @@ main{
     width: 120px;
 }
 
+.imagenHotel{
+    width: 140px;
+    object-fit: cover;
+}
+.contenedorHotel{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
         height: 400px;
