@@ -24,6 +24,11 @@ body {
     margin: 20px 0;
     padding: 10px;
     flex-wrap: wrap;
+
+}
+#searchResults a {
+
+    color: inherit;
 }
 @media (max-width: 500px) {
     #campoBusqueda {
