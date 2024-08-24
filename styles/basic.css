@@ -87,6 +87,12 @@ main{
     height: 60px;
 }
 
+.btnAtras{
+    position: absolute;
+    top: 62px;
+    z-index: 3;
+}
+
 @media all and (min-width: 577px) and (max-width: 991px){
     .imgDetalle{
         height: 400px;
