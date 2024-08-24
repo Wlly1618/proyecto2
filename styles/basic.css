@@ -4,9 +4,11 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+   
 }
 main{
     flex-grow: 1;
+   
 }
 
 body {
@@ -30,7 +32,7 @@ body {
     }
 
     #botonBusqueda {
-        width: 100%; 
+        width: 80%; 
         margin-top: 10px; 
         margin-top: 1em;
     }
@@ -57,8 +59,8 @@ body {
     padding: 12px 20px;
     border: none;
     border-radius: 25px;
-    background-color: #225c1d;
-    color: white;
+    background-color: #d8bc1d;
+    color: rgb(10, 10, 10);
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -67,7 +69,7 @@ body {
 }
 
 #botonBusqueda:hover {
-    background-color: #1f6112;
+    background-color: #fdfa52;
 }
 
 
@@ -85,7 +87,7 @@ body {
     color: white;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url('https://files.oaiusercontent.com/file-5WlNaqXmUPhCJuDvU971kFLc?se=2024-08-24T01%3A09%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DDise%25C3%25B1o%2520sin%2520t%25C3%25ADtulo.jpg&sig=U96c5CXGsDdA%2BcQ5EJ9VsmAqRwEClPA26zmVf8yTLVw%3D');
+    background-image: url('https://files.oaiusercontent.com/file-5WlNaqXmUPhCJuDvU971kFLc?se=2024-08-24T01%3A29%3A18Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DDise%25C3%25B1o%2520sin%2520t%25C3%25ADtulo.jpg&sig=5KuLJ1JkrSsldt5HgutuKbfNSQQf32O6lRIN1loeIsQ%3D');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -96,10 +98,10 @@ body {
     max-width: 40%;
     margin-left: 2em;
     margin-top: 5em;
-    padding: 5em;
-background-color: rgba(255, 255, 255, 0.5);
+    padding: 3em;
+background-color: rgba(22, 22, 22, 0.5);
 border-radius: 10px 30px 60px 120px;
-width: 40%;
+
 }
 
 .banner-content h1 {
@@ -108,8 +110,8 @@ width: 40%;
     font-weight: 400;
     font-style: normal;
     font-size: 3.5em;
-    color: rgb(17, 97, 21);
-    box-shadow:#0a685e;
+    color: rgb(238, 255, 0);
+    box-shadow:#af9541;
 
 
 }
@@ -117,8 +119,9 @@ width: 40%;
 .banner-content p  {
     font-size: 1.5em;
     margin-bottom: 30px;
-    color: rgb(43, 87, 22);
+    color: rgba(172, 180, 168, 0.774);
 padding: 0.3em;
+
 }
 
 .banner-content button {
@@ -133,6 +136,7 @@ padding: 0.3em;
     font-family: "Bowlby One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 1px;
     
 }
 
@@ -188,71 +192,6 @@ padding: 0.3em;
     }
 }
 
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5em;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.card {
-    flex: 1 1 120px; 
-    max-width: 200%; 
-    background-color: white;
-    text-align: center;
-    border-bottom: 2px solid #32CD32;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.card img {
-    width: 100%;
-    height: 200px; 
-    object-fit: cover;
-    border-bottom: 2px solid #32CD32;
-}
-
-.card-text {
-    padding: 10px;
-    font-size: 14px; 
-    
-    
-}
-.card-text a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-.card-text a:hover {
-    text-decoration: none;
-    color: #ffebeb;
-    background-color: #5fbb5f;
-    font-weight: bold;
-    padding: 0.5em;
-    transition: 0.5s;
-    border-radius: 1em;
-
-}
-
-
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 120px;
-        max-width: 130%;
-    
-    }
-    .card img {
-        height: 130px; 
-    }
-
-    .card-text {
-        font-size: 12px; 
-    }
-}
-
-
 
 .section-lugares {
     padding: 60px 20px;
@@ -261,7 +200,7 @@ padding: 0.3em;
 
 .texto-1 {
     font-size: 2.2em;
-    color: #185e1bc0;
+    color: #4e4e4bc0;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -336,7 +275,7 @@ padding: 0.3em;
     text-decoration: none;
     padding: 7px 15px;
     border-radius: 10px;
-background-color: #28702ede;
+background-color: #e4cb5dde;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
     font-weight: bold;
@@ -392,7 +331,7 @@ background-color: #28702ede;
         color: #ffffff;
         text-decoration: none;
         padding: 7px 15px;
-    background-color: #28702ede;
+    background-color: #bfc22ade;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         transition: background 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
         font-weight: bold;
@@ -515,7 +454,7 @@ background-color: #28702ede;
     text-transform: uppercase;
     font-family: "Bowlby One", sans-serif;
     font-style: normal; 
-    color: #468d46d7;
+    color: #2b2b2bd7;
 }
   .gallery {
     display: flex;
@@ -588,7 +527,7 @@ section {
     font-weight: 400;
     font-style: normal;
     font-size:1.8em;
-    color: #378f0eab;
+    color: #3f3f3dab;
     text-align: start;
 
 }
@@ -614,7 +553,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff; 
+    background-color: #c7c7be23; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     overflow: hidden;
@@ -706,7 +645,7 @@ section {
     padding: 20px;
     text-align: start;
     font-size: 2em;
-    color: #185e1bc0;
+    color: #3a3a3ac0;
 
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -719,7 +658,7 @@ section {
     padding: 20px;
     text-align: start;
     font-size: 1.2em;
-    color: #332f2fc0;
+    color: #33322fc0;
   font-family: Arial, Helvetica, sans-serif;
     text-align: start;
  
@@ -729,7 +668,8 @@ section {
 }
   
 .iconos-viajes{
-    color: #245f24bb;
+    color: #a19700bb;
+    margin-bottom: 2em;
 }
   #comentarios-lista {
     margin-bottom: 40px;
@@ -789,7 +729,7 @@ section {
   
   #form-comentarios button {
     padding: 15px;
-    background-color: #40E0D0; 
+    background-color: #646464; 
     color: #fff;
     border: none;
     border-radius: 90px;
@@ -799,14 +739,14 @@ section {
   }
   
   #form-comentarios button:hover {
-    background-color: #32CD32;
+    background-color: #4a4b0a;
   }
   
   .Alojamientos-section h2 {
     padding: 20px;
     text-align: start;
     font-size: 2.2em;
-    color: #185e1bc0;
+    color: #515251c0;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -866,7 +806,7 @@ section {
 }
 
 .details-btn:hover {
-    background-color: #94c71c;
+    background-color: #d4ff39;
 }
 
 .container-img{
@@ -901,7 +841,7 @@ section {
     text-transform: uppercase;
     font-family: "Bowlby One", sans-serif;
     font-style: normal; 
-    color: #468d46d7;
+    color: #505050d7;
 }
 
 @media  screen and (max-width:880px) {
