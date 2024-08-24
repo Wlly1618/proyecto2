@@ -1,8 +1,76 @@
-body{
+:root{
+    --rosa-coral: #ff6f61;
+    --naranja-purpura: #ff4500;
+    --dorado-suave: #ffd700;
+    --gris-oscuro: #4d5151;
+    --blanco-hueso: #e6e4e2;
+}
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-main{
+
+main {
     flex-grow: 1;
+    background-color: var(--blanco-hueso);
+}
+
+.scrollable-table {
+    height: 300px;
+    width: 100%;
+    overflow-y: auto;
+}
+.fondoNavFooter{
+    background-color: var(--gris-oscuro);
+}
+.logoNav{
+    max-height: 40px;
+    width: auto;
+}
+.iconosLetrasNav{
+    color: var(--dorado-suave) !important;
+}
+.iconosLetrasNav:hover{
+    text-shadow: 0px 4px 8px var(--naranja-purpura);
+    transform: translateY(-5px);
+}
+.titulosFooter{
+    color: var(--dorado-suave);
+}
+.textosFooter{
+    color: var(--blanco-hueso);
+}
+.textosFooter:hover{
+    cursor: pointer;
+}
+.hrFooter{
+    color: var(--dorado-suave);
+    font-weight: bold;
+}
+.titulos{
+    color: var(--naranja-purpura);
+}
+.subtitulos{
+    color: var(--rosa-coral);
+    font-weight: bold;
+}
+#botonNuevoPaquete{
+    background-color: var(--dorado-suave);
+    border: none;
+    color: var(--gris-oscuro);
+    font-weight: bold;
+}
+#botonNuevoPaquete:hover{
+    box-shadow: 0px 4px 9px var(--gris-oscuro);
+}
+#botonBuscar{
+    background-color: var(--gris-oscuro);
+    border: none;
+    color: var(--dorado-suave);
+    font-weight: bold;
+}
+#botonBuscar:hover{
+    box-shadow: 0px 4px 9px var(--gris-oscuro);
 }
