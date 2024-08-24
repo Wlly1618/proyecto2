@@ -42,7 +42,8 @@ async function load_data_table(table, data) {
         <th>${item.name}</th>
         <th>${item.category}</th>
         <th>${item.price}</th>
-        <td><button>U</button><button>D</button></td>
+        <td><button>U</button>
+        <button>D</button></td>
       </tr>
     `;
   });
