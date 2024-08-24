@@ -32,7 +32,7 @@ body {
     }
 
     #botonBusqueda {
-        width: 80%; 
+        width: 100%; 
         margin-top: 10px; 
         margin-top: 1em;
     }
@@ -87,7 +87,7 @@ body {
     color: white;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url('https://files.oaiusercontent.com/file-5WlNaqXmUPhCJuDvU971kFLc?se=2024-08-24T01%3A29%3A18Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DDise%25C3%25B1o%2520sin%2520t%25C3%25ADtulo.jpg&sig=5KuLJ1JkrSsldt5HgutuKbfNSQQf32O6lRIN1loeIsQ%3D');
+    background-image: url('https://files.oaiusercontent.com/file-5WlNaqXmUPhCJuDvU971kFLc?se=2024-08-24T02%3A02%3A43Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3DDise%25C3%25B1o%2520sin%2520t%25C3%25ADtulo.jpg&sig=WuU5Wv7tCXL75/zdXUv0zcoSJ0L5fRi%2BOBRrI3EEnck%3D');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -454,7 +454,7 @@ background-color: #e4cb5dde;
     text-transform: uppercase;
     font-family: "Bowlby One", sans-serif;
     font-style: normal; 
-    color: #2b2b2bd7;
+    color: #468d46d7;
 }
   .gallery {
     display: flex;
@@ -669,7 +669,6 @@ section {
   
 .iconos-viajes{
     color: #a19700bb;
-    margin-bottom: 2em;
 }
   #comentarios-lista {
     margin-bottom: 40px;
@@ -739,7 +738,7 @@ section {
   }
   
   #form-comentarios button:hover {
-    background-color: #4a4b0a;
+    background-color: #32CD32;
   }
   
   .Alojamientos-section h2 {
@@ -806,7 +805,7 @@ section {
 }
 
 .details-btn:hover {
-    background-color: #d4ff39;
+    background-color: #94c71c;
 }
 
 .container-img{
@@ -841,7 +840,7 @@ section {
     text-transform: uppercase;
     font-family: "Bowlby One", sans-serif;
     font-style: normal; 
-    color: #505050d7;
+    color: #468d46d7;
 }
 
 @media  screen and (max-width:880px) {
