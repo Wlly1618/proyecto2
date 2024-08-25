@@ -152,6 +152,9 @@
                     type="text"
                     class="form-control rounded-3"
                     id="pack_name"
+                    required
+                    minlength="5"
+                    maxlength="50"
                   />
                   <label for="pack_name">Nombre del Paquete</label>
                 </div>
@@ -161,6 +164,7 @@
                     class="form-control rounded-3"
                     list="data_category"
                     id="category"
+                    required
                   />
                   <label for="category">Categoria</label>
                   <datalist id="data_category"></datalist>
@@ -170,6 +174,8 @@
                     type="number"
                     class="form-control rounded-3"
                     id="price"
+                    required
+                    minlength="3"
                   />
                   <label for="price">Precio</label>
                 </div>
@@ -185,6 +191,9 @@
                   <textarea
                     class="form-control rounded-3"
                     id="description"
+                    required
+                    minlength="10"
+                    maxlength="100"
                   ></textarea>
                   <label for="description">Descripcion</label>
                 </div>
