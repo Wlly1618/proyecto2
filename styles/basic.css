@@ -186,3 +186,108 @@ main {
     }
   }
 }
+
+.imgDetalle{
+    height: 235px;
+    object-fit: cover;
+}
+
+.botonContacto{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.textobtn{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contenedorBtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.fijacionbtn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.listaTabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    min-width: 100%;
+    overflow: auto;
+}
+
+.anchoPalabra{
+    width: max-content;
+}
+.fechas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.totalNoche{
+    font-size: 12px;
+}
+.datosVuelo1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 14px;
+}
+.datosVuelo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.duracionViaje{
+    width: 120px;
+}
+
+.imagenHotel{
+    width: 140px;
+    object-fit: cover;
+}
+.contenedorHotel{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.imgComentarios{
+    width: 60px;
+    height: 60px;
+}
+
+.btnAtras{
+    position: absolute;
+    top: 62px;
+    z-index: 3;
+}
+
+@media all and (min-width: 577px) and (max-width: 991px){
+    .imgDetalle{
+        height: 400px;
+        object-position: 50% 10%;
+    }
+}
+@media all and (min-width: 992px){
+    .imgDetalle{
+        height: 450px;
+        object-position: 50% 10%; 
+    }
+
+    .posicionComentarios{
+        position: sticky;
+        top: 0;
+    }
+}
