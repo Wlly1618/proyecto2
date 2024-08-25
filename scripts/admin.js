@@ -120,6 +120,7 @@ create_pack_form.addEventListener("submit", async (event) => {
   packs.push(item);
 
   set_in_localstorage("array_packs", packs);
+  
   load_data_table(pack_table, packs);
 
   create_pack_form.reset();
