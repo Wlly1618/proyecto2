@@ -68,7 +68,7 @@
      color: white;
      height: 100vh;
      box-sizing: border-box;
-     background-image: url('../img/banner-index.png');
+     background-image: url('');
      background-size: cover;
    background-position: center;
      margin: 0;
@@ -91,7 +91,7 @@
      font-weight: 400;
      font-style: normal;
      font-size: 3.5em;
-     color: #ff4500;
+   
      box-shadow:#af9541;
  
  
@@ -574,7 +574,7 @@
      text-transform: uppercase;
      border: none;
      outline: none;
-     background-color: #ff6f61; 
+ 
      border-radius: 25px;
      transition: background-color 0.3s, color 0.3s;
      cursor: pointer;
