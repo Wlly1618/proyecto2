@@ -52,7 +52,7 @@ async function load_data_table(table, data) {
 
 load_data_table(pack_table, packs);
 
-async function create_pack(form, key) {
+function create_pack(form, key) {
   const form_data = new FormData(form);
   const item = {};
   
@@ -67,14 +67,28 @@ async function create_pack(form, key) {
   packs.push(item);
 
   // set_in_localstorage(key, packs);
+  load_data_table(pack_table, packs);
 }
 
 create_pack_form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  await create_pack(create_pack_form, 'array_packs');
+  packs = get_from_storage('array_packs');
+  // packs = [];
 
-  await load_data_table(pack_table, packs);
 
-  create_pack_form.reset();
+  it = packs[packs.length - 1].id + 1;
+
+  const item = {
+    id : it,
+    name: pack_name.value,
+    category: category.value, 
+    price: price.value, 
+    description: description.value,
+    url: url_img.value
+  };
+
+  packs.push(item);
+
+  set_in_localstorage('array_packs', packs);
 });
