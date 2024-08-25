@@ -125,3 +125,13 @@ create_pack_form.addEventListener("submit", async (event) => {
 
   create_pack_form.reset();
 });
+
+// busqueda de paquetes en la tabla
+document.getElementById("search_form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const searchQuery = document.getElementById("input_search").value.toLowerCase();
+  const filteredPacks = packs.filter(pack => pack.name.toLowerCase().includes(searchQuery));
+
+  load_data_table(pack_table, filteredPacks);
+});
