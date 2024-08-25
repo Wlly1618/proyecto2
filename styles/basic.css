@@ -1,3 +1,870 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   
+}
+main{
+    flex-grow: 1;
+   
+}
+
+body {
+    font-family: Arial, sans-serif;
+   
+ 
+      
+}
+.contenedor-busqueda {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+    #campoBusqueda {
+        max-width: 100%; 
+       
+    }
+
+    #botonBusqueda {
+        width: 80%; 
+        margin-top: 10px; 
+        margin-top: 1em;
+    }
+}
+
+#campoBusqueda {
+    padding: 12px 15px;
+    width: 200%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#campoBusqueda:focus {
+    outline: none;
+    border-color: #23751b;
+    box-shadow: 0 4px 8px rgba(67, 141, 7, 0.2);
+}
+
+#botonBusqueda {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #d8bc1d;
+    color: rgb(10, 10, 10);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    margin-top: 1em;
+}
+
+#botonBusqueda:hover {
+    background-color: #fdfa52;
+}
+
+
+
+.contenedor-busqueda::after {
+    background: rgba(143, 0, 0, 0.4);
+}
+
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url('../img/banner-index.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+ 
+}
+.banner-content {
+    max-width: 40%;
+    margin-left: 2em;
+    margin-top: 5em;
+    padding: 3em;
+background-color: rgba(22, 22, 22, 0.5);
+border-radius: 10px 30px 60px 120px;
+
+}
+
+.banner-content h1 {
+    margin-bottom: 20px;
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5em;
+    color: rgb(238, 255, 0);
+    box-shadow:#af9541;
+
+
+}
+
+.banner-content p  {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: rgba(248, 255, 245, 0.808);
+padding: 0.3em;
+
+}
+
+.banner-content button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #a5984b; 
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 249);
+    cursor: pointer;
+    border-radius: 30px 50px 60px 120px;
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    
+}
+
+@media (max-width: 1024px) {
+    .banner-container {
+        flex-direction: column;
+        height: auto;
+        padding: 90px;
+        margin-top: 2em;
+    }
+
+    .banner-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 2em;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1.2em;
+    }
+
+    .banner-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        padding: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+    }
+
+    .banner-content button {
+        font-size: 12px;
+        padding: 8px 16px;
+        color: rgb(32, 70, 34);
+    }
+}
+
+
+.section-lugares {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.texto-1 {
+    font-size: 2.2em;
+    color: #4e4e4bc0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: start;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+}
+
+/* Grilla de tarjetas */
+.country-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+
+.country-card {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+}
+
+.country-card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    transition: background-size 0.5s ease;
+}
+
+.country-card:hover .country-card-image {
+    background-size: 110%;
+}
+
+.country-card-text {
+    color: #fff;
+    padding: 2em;
+    width: 500%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.country-card-text h3{
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+}
+.country-card-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.country-card-text ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+background-color: #e4cb5dde;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.country-card-text ul li a:hover {
+    background: rgb(238, 76, 76);
+    color: #ffefef;
+}
+
+
+@media (max-width: 828px) {
+    .country-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+    .country-card-image {
+        height: 350px; 
+    }
+
+    .country-card-text {
+        font-size: 3.5em; 
+        padding: 0.5em; 
+    }
+}
+
+/* Media Queries para Celulares */
+@media (max-width: 580px) {
+    .country-cards {
+        grid-template-columns: 1fr; 
+    }
+
+    .country-card-image {
+        height: 180px; 
+    }
+  
+    .country-card-text {
+        font-size: 1em;
+        text-align: center;
+        padding: 2em; 
+    }
+
+    .country-card-text ul {
+        flex-direction: row;
+        text-align: center;
+    }
+    .texto-1 {
+        font-size: 2em;
+
+    }
+    .country-card-text ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 7px 15px;
+    background-color: #bfc22ade;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.7em;
+    }
+}
+
+
+.icons{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.2em;
+   
+}
+.icon img{
+    width: 15vh;
+    border-radius: 20%;
+}
+@media only screen and (max-width: 800px) {
+    .icons .icon {
+        display: none;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content-d {
+    padding: 20px;
+    background-color: #b7d1fc7a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+
+}
+
+.img-fluid {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-texto {
+    flex: 1;
+
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.75rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.highlights {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlights li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #bd53a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #fc4cc7;
+    color: #f0f0f0;
+}
+
+.content-d img{
+    border-radius: 10%;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+    position: relative;
+    width: 1400px;
+  }
+.gallery-wrap h2{
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+    color: #2b2b2bd7;
+}
+  .gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .gallery span {
+    flex: none;
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    transition: transform 0.5s;
+    border-radius: 1em;
+ 
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(82, 77, 80, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .scroll-btn.left {
+    left: 0;
+  }
+
+  .scroll-btn.right {
+    right: 0;
+  }
+
+
+section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+ 
+  .product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 5em;
+}
+
+.product-category {
+    padding: 0 5vw;
+    margin-bottom: 40px;
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.8em;
+    color: #3f3f3dab;
+    text-align: start;
+
+}
+
+.product-container {
+    padding: 0 2vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-height: 350px; 
+    overflow-y: hidden; 
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 350px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c7c7be23; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s; 
+}
+
+.product-card:hover .product-thumb {
+    transform: scale(1.05); 
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    width: 80%;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: #ff6f61; 
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background-color: #ff3b30; 
+    color: #ffffff;
+}
+
+.product-info {
+    width: 100%;
+    height: 30%;
+    padding: 15px; 
+    box-sizing: border-box; 
+}
+
+.product-brand {
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    color: #333; 
+    text-align: center;
+}
+
+
+
+
+.seccion-comentarios {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+.texto-foto-C h2{
+    padding: 20px;
+    text-align: start;
+    font-size: 2em;
+    color: #3a3a3ac0;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: start;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+}
+  
+.texto-foto-C p{
+    padding: 20px;
+    text-align: start;
+    font-size: 1.2em;
+    color: #33322fc0;
+  font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+ 
+}
+.texto-foto-C img{
+    margin-left: 5em;
+}
+  
+.iconos-viajes{
+    color: #a19700bb;
+    margin-bottom: 2em;
+}
+  #comentarios-lista {
+    margin-bottom: 40px;
+  }
+  
+  .comentario-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .comentario-foto {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .comentario-texto h4 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #333;
+  }
+  
+  .comentario-texto p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #555;
+  }
+  
+  #form-comentarios {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #form-comentarios h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  #form-comentarios input, #form-comentarios textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  
+  #form-comentarios button {
+    padding: 15px;
+    background-color: #646464; 
+    color: #fff;
+    border: none;
+    border-radius: 90px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #form-comentarios button:hover {
+    background-color: #4a4b0a;
+  }
+  
+  .Alojamientos-section h2 {
+    padding: 20px;
+    text-align: start;
+    font-size: 2.2em;
+    color: #515251c0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: start;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+}
+
+.Alojamientos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Alojamientos-card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Alojamientos-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Alojamientos-image img {
+    width: 100%;
+    height: auto;
+}
+
+.Alojamientos-info {
+    padding: 15px;
+}
+
+.Alojamientos-info h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.Alojamientos-info p {
+    color: #666;
+}
+
+.details-btn {
+    background-color: #9c6e32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #d4ff39;
+}
+
+.container-img{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+}
+.container-img .box-img figure{
+    width: 100%;
+    height: 100%;
+}
+.container-img .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-img .box-img:nth-child(1){
+    grid-column-start: span 2;
+}
+.container-img .box-img:nth-child(4){
+    grid-row-start: span 2;
+}
+.contenedor-galeria h2{
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Bowlby One", sans-serif;
+    font-style: normal; 
+    color: #505050d7;
+}
+
+@media  screen and (max-width:880px) {
+    .container-img{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+    .container-img .box-img:nth-child(1){
+        grid-column-start: span 1;
+    }
+    
+}
+@media  screen and (max-width:500px) {
+
+    .container-img{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-img .box-img img{
+        height: 200px;
+    }
+}
+=======
 :root {
   --rosa-coral: #ff6f61;
   --naranja-purpura: #ff4500;
