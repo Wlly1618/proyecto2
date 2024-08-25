@@ -16,6 +16,10 @@ main {
   flex-grow: 1;
 }
 
+.fondoGeneral{
+  background-color: var(--blanco-hueso);
+}
+
 .scrollable-table {
   height: 300px;
   width: 100%;
@@ -290,4 +294,82 @@ main {
         position: sticky;
         top: 0;
     }
+}
+
+/* estilos pagina detalle */
+.etiquetasA{
+  color: var(--rosa-coral);
+  font-weight: bold;
+}
+.letrasCarrousel{
+  background-color: var(--gris-oscuro);
+  color: var(--dorado-suave);
+  font-weight: bold;
+}
+.titulosOpiniones{
+  color: var(--rosa-coral);
+}
+.btnOpiniones{
+  background-color: var(--gris-oscuro);
+  color: var(--dorado-suave);
+  font-weight: bold;
+}
+.btnOpiniones:hover{
+  background-color: var(--dorado-suave);
+  color: var(--gris-oscuro);
+}
+.btnReservarViaje{
+  background-color: var(--blanco-hueso);
+  border: 3px solid var(--rosa-coral);
+  color: var(--rosa-coral);
+}
+.btnContactanos{
+  background-color: var(--blanco-hueso);
+  border: 3px solid var(--gris-oscuro);
+}
+.titulosGenerales{
+  color: var(--naranja-purpura);
+}
+.titulosTablaDescriptiva{
+  color: var(--gris-oscuro) !important;
+  background-color: var(--blanco-hueso) !important;
+}
+.detallePrecio{
+  background-color: var(--gris-oscuro);
+}
+.accordion-button:not(.collapsed) {
+  border-top-color: var(--dorado-suave); 
+}
+.accordion-button::after {
+  filter: invert(1); 
+}
+.accordion-item {
+  border: none;
+}
+.accordion-button {
+  background-color: var(--gris-oscuro); 
+  color: var(--blanco-hueso); 
+}
+.accordion-button.collapsed {
+  border-bottom-color: var(--gris-oscuro); 
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--gris-oscuro); 
+  color: var(--blanco-hueso); 
+  border: none; 
+}
+.accordion-body span.text-primary {
+  color: var(--naranja-purpura) !important; 
+}
+.globosFechas{
+  background-color: var(--dorado-suave);
+}
+.iconosVuelos{
+  color: var(--naranja-purpura) !important;
+}
+.estrellasHoteles{
+  color: var(--dorado-suave);
+}
+.btnPuntuacion{
+  background-color: var(--naranja-purpura);
 }

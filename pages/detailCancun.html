@@ -27,56 +27,46 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">(logo)</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarNavAltMarkup"
-          >
-            <div class="navbar-nav text-center">
-              <a class="nav-link active mx-4" aria-current="page" href="#">
-                <i class="bi bi-box-arrow-in-right"></i><br />Login
-              </a>
-              <a class="nav-link mx-4" href="#">
-                <i class="bi bi-gift"></i><br />Paquetes
-              </a>
-              <!-- autos y circuitos llevaran a la pagina del error 404 -->
-              <a class="nav-link mx-4" href="#">
-                <i class="bi bi-car-front"></i><br />Autos
-              </a>
-              <a class="nav-link mx-4" href="#">
-                <i class="bi bi-geo-alt"></i><br />Circuitos
-              </a>
-              <a class="nav-link mx-4" href="#">
-                <i class="bi bi-people"></i><br />Nosotros
-              </a>
-              <!-- administrador solo aparecera al logearse -->
-              <a class="nav-link mx-4" href="#">
-                <i class="bi bi-gear"></i><br />Administrador
-              </a>
+      <nav class="navbar navbar-expand-lg fondoNavFooter">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../img/aereotrip-high-resolution-logo-transparent.png" alt="logo de Aereotrip" class=" img-fluid logoNav"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav text-center">
+                <a class="nav-link mx-4 iconosLetrasNav" aria-current="page" href="#">
+                  <i class="bi bi-box-arrow-in-right"></i><br>Login
+                </a>
+                <a class="nav-link mx-4 iconosLetrasNav" href="#">
+                  <i class="bi bi-gift"></i><br>Paquetes
+                </a>
+                <!-- autos y circuitos llevaran a la pagina del error 404 -->
+                <a class="nav-link mx-4 iconosLetrasNav" href="#">
+                  <i class="bi bi-car-front"></i><br>Autos
+                </a>
+                <a class="nav-link mx-4 iconosLetrasNav" href="#">
+                  <i class="bi bi-geo-alt"></i><br>Circuitos
+                </a>
+                <a class="nav-link mx-4 iconosLetrasNav" href="#">
+                  <i class="bi bi-people"></i><br>Nosotros
+                </a>
+                <!-- administrador solo aparecera al logearse -->
+                <a class="nav-link mx-4 iconosLetrasNav" href="#">
+                  <i class="bi bi-gear"></i><br>Administrador
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <main class="container-fluid">
+        </nav>
+        
+  </header>
+    <main class="container-fluid fondoGeneral">
       <section class="row">
         <div class="my-3 d-none d-lg-block">
           <ul class="list-group list-unstyled d-flex flex-row">
             <li>
-              <a class="text-decoration-none link-underline-opacity-25 link-underline-opacity-100-hover" href="../index.html">Inicio</a>
+              <a class="text-decoration-none link-underline-opacity-25 link-underline-opacity-100-hover etiquetasA" href="../index.html">Inicio</a>
             </li>
             <li>
               <span class="px-2"> > </span>
@@ -87,7 +77,7 @@
           </ul>
         </div>
         <div class="btnAtras ps-2 d-lg-none">
-          <a class="rounded-circle bg-light bg-opacity-50 fs-1" href="#"><i class="bi bi-arrow-left-short text-dark"></i></a>
+          <a class="rounded-circle bg-light bg-opacity-50 fs-1 etiquetasA" href="#"><i class="bi bi-arrow-left-short text-dark"></i></a>
         </div>
         <div class="col-lg-8 px-0">
           <!-- Carouesel de img del destino -->
@@ -123,8 +113,8 @@
                     alt="Cristo Redentor con un paisaje de fondo"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Aerotrip Te Lleva al Paraíso</h5>
-                    <p>
+                    <h5 class="letrasCarrousel">Aerotrip Te Lleva al Paraíso</h5>
+                    <p class="letrasCarrousel">
                         Sumérgete en aguas turquesas y arenas blancas. Con Aerotrip, descubre el destino perfecto para relajarte y disfrutar del sol en Cancún
                     </p>
                   </div>
@@ -136,8 +126,8 @@
                     alt="Camboriu"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Cancún: Vacaciones Soñadas</h5>
-                    <p>
+                    <h5 class="letrasCarrousel">Cancún: Vacaciones Soñadas</h5>
+                    <p class="letrasCarrousel">
                     ¿Listo para unas vacaciones que nunca olvidarás? Con Aerotrip, disfruta de todo lo que Cancún tiene para ofrecer: playas, fiestas y aventuras únicas.
                     </p>
                   </div>
@@ -149,8 +139,8 @@
                     alt="playa de Brasil"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>No lo pienses más... Y conocé Cancún junto a Aerotrip</h5>
-                    <p>
+                    <h5 class="letrasCarrousel">No lo pienses más... Y conocé Cancún junto a Aerotrip</h5>
+                    <p class="letrasCarrousel">
                       Descubra la comodidad y el lujo mientras explora los mejores
                       destinos con nuestros paquetes de viajes.
                     </p>
@@ -192,7 +182,7 @@
               <ul class="nav nav-underline listaTabla" id="tablaDescriptiva" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link active pb-3"
+                    class="nav-link active pb-3 titulosTablaDescriptiva"
                     id="detalle-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#detalle-tab-pane"
@@ -206,7 +196,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link anchoPalabra pb-3"
+                    class="nav-link anchoPalabra pb-3 titulosTablaDescriptiva"
                     id="fechasPrecio-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#fechasPrecio-tab-pane"
@@ -220,7 +210,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link pb-3"
+                    class="nav-link pb-3 titulosTablaDescriptiva"
                     id="vuelos-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#vuelos-tab-pane"
@@ -234,7 +224,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                   <button
-                    class="nav-link pb-3"
+                    class="nav-link pb-3 titulosTablaDescriptiva"
                     id="hoteles-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#hoteles-tab-pane"
@@ -243,7 +233,7 @@
                     aria-controls="hoteles-tab-pane"
                     aria-selected="false"
                   >
-                    hoteles
+                    Hoteles
                   </button>
                 </li>
               </ul>
@@ -394,15 +384,15 @@
                 >
                 <h2 class="fw-bold mt-3 mb-0">Salidas disponibles</h2>
                   <article class="fechas">
-                    <div class="position-relative py-1 px-1 text-center text-bg-secondary border border-secondary rounded-4">
-                      <span class="fw-bold my-4">SEP 2024</span> <svg width="1em" height="1em" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                    <div class="position-relative py-1 px-1 text-center globosFechas border rounded-4">
+                      <span class="fw-bold my-4">SEP 2024</span>
                       <div class="bg-light text-dark px-3 d-flex flex-column rounded-bottom-4">
                         <span>A partir de</span>
                         <span class="fw-bold fs-5">$2.528.000</span>
                       </div>
                     </div>
-                    <div class="position-relative py-1 px-1 text-center text-bg-secondary border border-secondary rounded-4">
-                      <span class="fw-bold my-4">OCT 2024</span> <svg width="1em" height="1em" class="position-absolute top-100 start-50 translate-middle mt-1" fill="var(--bs-secondary)"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                    <div class="position-relative py-1 px-1 text-center globosFechas border rounded-4">
+                      <span class="fw-bold my-4">OCT 2024</span>
                       <div class="bg-light text-dark px-3 d-flex flex-column rounded-bottom-4">
                         <span>A partir de</span>
                         <span class="fw-bold fs-5">$2.528.000</span>
@@ -476,7 +466,7 @@
                   <p class="mb-0 fw-bold">Tramo 1</p>
                   <div class="datosVuelo1"> 
                     <div>
-                      <span>Buenos Aires</span> <i class="bi bi-arrow-right-short"></i> <span>Cancún</span>
+                      <span>Buenos Aires</span> <i class="bi bi-arrow-right-short iconosVuelos"></i> <span>Cancún</span>
                     </div>
                     <div>
                       Dom 01/09/2024
@@ -484,7 +474,7 @@
                   </div>
                   <div class="mt-2 mb-3 rounded-4 border py-2 px-3 shadow">
                     <div class="datosVuelo1 border-bottom">
-                      <i class="bi bi-airplane fs-1"></i>
+                      <i class="bi bi-airplane fs-1 iconosVuelos"></i>
                       <div class="datosVuelo">
                         <div>
                           <p class="mb-0 text-body-tertiary text-end fw-bold fs-6">BUE</p>
@@ -501,7 +491,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center my-2 text-body-tertiary">
-                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3"></i>
+                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3 iconosVuelos"></i>
                     </div>
                   </div>
                 </article>
@@ -509,7 +499,7 @@
                   <p class="mb-0 fw-bold">Tramo 2</p>
                   <div class="datosVuelo1"> 
                     <div>
-                      <span>Cancún</span> <i class="bi bi-arrow-right-short"></i> <span>Buenos Aires</span>
+                      <span>Cancún</span> <i class="bi bi-arrow-right-short iconosVuelos"></i> <span>Buenos Aires</span>
                     </div>
                     <div>
                       Vie 06/09/2024
@@ -517,7 +507,7 @@
                   </div>
                   <div class="mt-2 mb-3 rounded-4 border py-2 px-3 shadow">
                     <div class="datosVuelo1 border-bottom">
-                      <i class="bi bi-airplane fs-1"></i>
+                      <i class="bi bi-airplane fs-1 iconosVuelos"></i>
                       <div class="datosVuelo">
                         <div>
                           <p class="mb-0 text-body-tertiary text-end fw-bold fs-6">CUN</p>
@@ -534,7 +524,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center my-2 text-body-tertiary">
-                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3"></i>
+                      <p class="mb-0 totalNoche fw-bold">Vuelo operado por Aerotrip</p> <i class="bi bi-suitcase-fill fs-3 iconosVuelos"></i>
                     </div>
                   </div>
                 </article>
@@ -556,15 +546,15 @@
                     <div class="d-flex flex-column">
                         <h2 class="fs-4">Club Med Cancún Yucatán</h2>
                        <div>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
-                         <i class="bi bi-star-fill text-warning"></i>
+                         <i class="bi bi-star-fill estrellasHoteles"></i>
+                         <i class="bi bi-star-fill estrellasHoteles"></i>
+                         <i class="bi bi-star-fill estrellasHoteles"></i>
+                         <i class="bi bi-star-fill estrellasHoteles"></i>
+                         <i class="bi bi-star-fill estrellasHoteles"></i>
                        </div>
                           <p class="my-1">Puntuación</p>
                       <div class="d-flex align-items-center">
-                        <span class="btn btn-success p-1 me-2">10/10</span>
+                        <span class="btn btnPuntuacion p-1 me-2">10/10</span>
                         <p class="mb-0"><i class="bi bi-geo-alt-fill"></i>Cancún</p>
                     </div>
                     <h3 class="mt-2">$1.200.000</h3>
@@ -581,7 +571,7 @@
           <div class="row posicionComentarios">
             <div class="col-lg-12">
               <div>
-                <h2>Opiniones de Nuestros Viajeros</h2>
+                <h2 class="titulosOpiniones">Opiniones de Nuestros Viajeros</h2>
                 <p class="lead">Nos enorgullece ofrecer experiencias de viaje inolvidables. Pero no tomes solo nuestra palabra; escucha lo que nuestros clientes tienen que decir. Estos son algunos de los comentarios que hemos recibido de personas que han vivido aventuras excepcionales con nosotros. ¡Tu próxima historia de viaje podría ser la próxima en aparecer aquí!</p>
               </div>
             </div>
@@ -609,7 +599,7 @@
                 <div class="mb-3">
                   <textarea id="comentario" class="form-control" placeholder="Escribe tu comentario" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Agregar Comentario</button>
+                <button type="submit" class="btn btnOpiniones mb-2">Agregar Comentario</button>
               </form>
             </div>
           </div>
@@ -672,50 +662,48 @@
         <section class="container-fluid py-3 bg-light fijacionbtn">
           <article class="contenedorBtn">
             <div class="w-50 botonContacto">
-              <a class="textobtn btn btn-outline-primary rounded-pill fw-bold py-2 fs-3" href="#"><span class="fs-2"><i class="bi bi-airplane me-2"></i></span>Reservar viaje</a>
+              <a class="textobtn btn btnReservarViaje rounded-pill fw-bold py-2 fs-3" href="#"><span class="fs-2"><i class="bi bi-airplane me-2"></i></span>Reservar viaje</a>
             </div>
             <div class="w-50 botonContacto">
-              <a class="textobtn btn btn-success rounded-pill fw-bold py-2 fs-3" href="#"> <span class="fs-2"><i class="bi bi-whatsapp me-2"></i></span>Contactanos</a>
+              <a class="textobtn btn btnContactanos rounded-pill fw-bold py-2 fs-3" href="#"> <span class="fs-2"><i class="bi bi-whatsapp me-2"></i></span>Contactanos</a>
             </div>
           </article>
         </section>
     </main>
-    <footer class="bg-body-tertiary">
+    <footer class="fondoNavFooter">
       <div class="container">
-        <div class="row mt-4">
-          <div class="col-md-4">
-            <h5>Donde Encontranos</h5>
-            <p>123 Calle Principal, San Miguel de Tucumán, Argentina</p>
-            <p>Teléfono: +1 (123) 456-7890</p>
-            <p>Email: info@agenciaviajes.com</p>
+          <div class="row mt-4 justify-content-center align-items-center">
+            <div class="col-md-4">
+              <h5 class="titulosFooter">Donde Encontranos</h5>
+              <p class="textosFooter">123 Calle Principal, San Miguel de Tucumán, Argentina</p>
+              <p class="textosFooter">Teléfono: +1 (123) 456-7890</p>
+              <p class="textosFooter">Email: info@aereotrip.com</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="titulosFooter">Confianza en tus Reservas</h5>
+              <ul class="list-unstyled textosFooter">
+                <li>Terminos y Condiciones</li>
+                <li class="mt-2">Política de Privacidad</li>
+                <li class="mt-2">Ofertas</li>
+                <li class="mt-2">Promociones Vigentes</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="titulosFooter">Nuestras redes</h5>
+              <ul class="list-unstyled textosFooter">
+                <li><i class="bi bi-instagram mx-2"></i>Instagram</li>
+                <li class="mt-2"><i class="bi bi-facebook mx-2"></i>Facebook</li>
+                <li class="mt-2"><i class="bi bi-twitter-x mx-2"></i>Twitter</li>
+                <li class="mt-2"><i class="bi bi-tiktok mx-2"></i>Tiktok</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h5>Confianza en tus Reservas</h5>
-            <ul class="list-unstyled">
-              <li>Terminos y Condiciones</li>
-              <li class="mt-2">Política de Privacidad</li>
-              <li class="mt-2">Ofertas</li>
-              <li class="mt-2">Promociones Vigentes</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5>Nuestras redes</h5>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-instagram mx-2"></i>Instagram</li>
-              <li class="mt-2"><i class="bi bi-facebook mx-2"></i>Facebook</li>
-              <li class="mt-2"><i class="bi bi-twitter-x mx-2"></i>Twitter</li>
-              <li class="mt-2"><i class="bi bi-tiktok mx-2"></i>Tiktok</li>
-            </ul>
+          <hr class="bg-white hrFooter">
+          <div class="text-center">
+            <p class="mb-0 textosFooter">&copy; 2024 Aereotrip. Todos los derechos reservados.</p>
           </div>
         </div>
-        <hr class="bg-white" />
-        <div class="text-center">
-          <p class="mb-0">
-            &copy; 2024 (Nombre de la agencia). Todos los derechos reservados.
-          </p>
-        </div>
-      </div>
-    </footer>
+  </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

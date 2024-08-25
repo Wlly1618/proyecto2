@@ -1,6 +1,29 @@
 // Variables
 let packs = get_from_storage("array_packs");
 
+if (packs.length < 1)
+{
+  packs.push({
+    id: 1,
+    name: "Escapada a Mendoza",
+    category: "Regional",
+    price: "45000",
+    description: "Viaje re copado a Mendoza",
+    url: "https://peakvisor.com/photo/Andes-Mountains-Argentina-Cerro-Aconcagua-1.jpg"
+  });
+
+  packs.push({
+    id: 2,
+    name: "Escapada a Miami",
+    category: "Internacional",
+    price: "78000",
+    description: "Viaje re copado a Miami",
+    url: "https://www.vamosamiami.net/files/wp-content/uploads/VAM_Clima_01.jpg"
+  });
+
+  set_in_localstorage("array_packs", packs);
+}
+
 const packs_name = [];
 const categorys = ["Regional", "Nacional", "Internacional", "Especial"];
 
@@ -65,7 +88,6 @@ function get_packs_name(out) {
 function load_datalist(data_element, data) {
   let text = ``;
   data.forEach((item) => {
-    console.log(item);
     text += `<option value="${item}"> ${item} </option>`;
   });
 
