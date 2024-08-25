@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="proyecto final de modulo donde se realizara una practica de CRUD de una Agencia de Viajes">
     <meta name="keywords" content="CRUD, viajes, practica, JS">
-    <meta name="author" content="Felicitas Rallé, Milagros Antoni, Luis Leonardo Reartez, Oscar Alfredo Ventura, Wilfredo Joel Serrano">
+    <meta name="author" content="Felicitas Rallé, Milagros Antoni, Oscar Alfredo Ventura, Wilfredo Joel Solano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/basic.css">
+    <link rel="stylesheet" href="./styles/estilos-index.css">
     <title>CRUD Agencia de Viajes</title>
 </head>
 <body>
@@ -47,7 +57,465 @@
           </nav>
           
     </header>
-    <main></main>
+    <main>
+        <article class="banner-container">
+            <div class="banner-content">
+                <h1>NUNCA DEJES DE EXPLORAR EL MUNDO.</h1>
+                <p>Descubre nuevos horizontes, sumérgete en culturas fascinantes y crea recuerdos inolvidables. </p>
+                <article class="contenedor-busqueda">
+                    <input type="text" id="campoBusqueda" placeholder="Buscar...">
+                    <button id="botonBusqueda">Buscar</button>
+                </article>
+            </div>
+        </article>
+       
+     
+    <section class="product">
+        <h2 class="product-category">Descubre Argentina!</h2>
+        <button class="scroll-btn left backBtn">&#10094;</button>
+        <button class="scroll-btn right nextBtn">&#10095;</button>
+        <div class="product-container">
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/41/db/ac/41dbac1f3464ed3cd407a7267c0611a8.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Aventura en la Patagonia</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/e0/36/f6/e036f6c8a6d501d873dbce3e90727de8.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Turismo Rural en Tandil</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/eb/f2/53/ebf2538a8dbfc1bc939954f887824724.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Ruta del Vino en Mendoza</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/e8/62/df/e862df29c65b00a8c2a2342c775f81f8.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Aventura en Bariloche</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/7f/bb/61/7fbb611db5443cd202df3588046540fd.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Buenos Aires Cultural</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/77/7a/d8/777ad8984345eb5fd70a9881766409f2.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Maravillas del Norte en Salta</h2>      
+                </div>
+            </div>
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/9b/fc/74/9bfc745f68ad16e3cc20d2d7f6368ded.jpg"  class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand"> Turismo En Villa Carlos Paz</h2>      
+                </div>
+            </div>
+            </div>
+          
+    </section>
+    <!--Administrador-->
+    <section class="product " id="Promociones" data-name ="promociones">
+        <h2 class="product-category">¡Ofertas Internacionales para Tu Próxima Escapada!</h2>
+        <button class="scroll-btn left backBtn">&#10094;</button>
+        <button class="scroll-btn right nextBtn">&#10095;</button>
+        <div class="product-container">
+            <!-- Promoción 1 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/736x/16/8f/6e/168f6e01351fa4ba10342e0a10dbf360.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Explora las Islas Griegas</h2>
+                    <p class="product-description">¡Descuento del 30% en paquetes de 7 noches en Santorini!</p>
+                </div>
+            </div>
+    
+            <!-- Promoción 2 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/a3/a7/a4/a3a7a4dc7450cd879fbc547eb172af7d.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Aventura en Japón</h2>
+                    <p class="product-description">¡Reserva anticipada con un 25% de descuento en tours por Tokio y Kioto!</p>
+                </div>
+            </div>
+    
+            <!-- Promoción 3 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/fd/09/5a/fd095ab1a5ea9c80122208686ca99e78.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Cultura y Playas en México</h2>
+                    <p class="product-description">¡Descuento del 20% en estancias de 5 noches en Cancún!</p>
+                </div>
+            </div>
+    
+            <!-- Promoción 4 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/b4/39/d8/b439d85ee913fd9c0b7beb14da7498c7.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Descubre la Riviera Maya</h2>
+                    <p class="product-description">¡Oferta especial del 15% en paquetes todo incluido!</p>
+                </div>
+            </div>
+    
+            <!-- Promoción 5 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/5a/aa/99/5aaa9922d54ba711690f350f37b82d8d.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Aventura en Perú</h2>
+                    <p class="product-description">¡20% de descuento en tours a Machu Picchu y Cusco!</p>
+                </div>
+            </div>
+    
+            <!-- Promoción 6 -->
+            <div class="product-card border border-bottom">
+                <div class="product-image">
+                    <img src="https://i.pinimg.com/564x/0f/93/99/0f939935ab953afeadbf76bec2066e78.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Ver Más</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Viaje a la Ciudad del Cabo</h2>
+                    <p class="product-description">¡Descuento del 30% en estancias de 6 noches!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <section class="section-lugares" id="Lugares">
+        <h2 class=" mt-3 texto-1">  Lugares Populares</h2>
+        
+            <div class="country-cards container">
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://i.pinimg.com/564x/20/45/c4/2045c43d987cabc1e6466bacf5d6774e.jpg');">
+                        <div class="country-card-text ">
+                           <h3>  Rio de Janeiro </h3>
+                
+                  <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://i.pinimg.com/564x/a9/e1/72/a9e172c0c3de729c814684849b5a70dd.jpg');">
+                        <div class="country-card-text"> <h3>Seúl </h3>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://i.pinimg.com/564x/42/8c/8f/428c8f8b2913b9911211c9017276dce8.jpg');">
+                        <div class="country-card-text"> <h3> Madrid</h3>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://th.bing.com/th/id/OIP.INB7nsN_TGttYNu4sINevQHaEW?rs=1&pid=ImgDetMain');">
+                        <div class="country-card-text"> <h3> Roma</h3>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://i.pinimg.com/564x/25/f5/5c/25f55cb57810636dd586d40bf2bf493b.jpg');">
+                        <div class="country-card-text">  <h3>New York </h3>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-card-image" style="background-image: url('https://i.pinimg.com/564x/04/84/c3/0484c33708e0d6be73bdf716bb8e62a9.jpg');">
+                        <div class="country-card-text"> <h3> Cancún</h3>
+                            <ul class="nav">
+                                <li class="nav-item"><a href="" class="nav-link">Hotel</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Paquetes</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">Autos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Alojamientos" class="Alojamientos-section" >
+            <h2>Encuentra tu Alojamiento Ideal</h2>
+            <div class="Alojamientos-list">
+        
+                <div class="Alojamientos-card">
+                    <div class="Alojamientos-image">
+                        <img src="https://www.myboutiquehotel.com/photos/109416/palacio-de-los-duques-gran-melia-the-leading-hotels-of-the-world-madrid-165-61446-1110x700.jpg" alt="Alojamiento 1">
+                    </div>
+                    <div class="Alojamientos-info">
+                        <h3 class="mt-3">Hotel Gran Meliá Palacio de los Duques</h3>
+                        <p>📍 Madrid, España</p>
+                        <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        <button class="details-btn" onclick="showDetails('hotel1')">Ver Más</button>
+                    </div>
+                </div>
+                <!-- Alojamientos Item 2 -->
+                <div class="Alojamientos-card">
+                    <div class="Alojamientos-image">
+                        <img src="https://wander-argentina.com/wp-content/uploads/2012/09/WA-buenos-aires-hotel-Alvear-hall.jpg" alt="Alojamiento 2">
+                    </div>
+                    <div class="Alojamientos-info">
+                        <h3>Alvear Palace Hotel</h3>
+                        <p>📍 Buenos Aires, Argentina</p>
+                        <p> ⭐️⭐️⭐️⭐️</p>
+                        <button class="details-btn" >Ver Más</button>
+                    </div>
+                </div>
+                <div class="Alojamientos-card">
+                    <div class="Alojamientos-image">
+                        <img src="https://www.qantas.com/content/travelinsider/en/explore/south-america/brazil/rio-de-janeiro/hotel-review-belmond-copacabana-palace-rio-de-janeiro/_jcr_content/parsysTop/hero.img.full.medium.jpg/1532402225259.jpg" alt="Alojamiento 2">
+                    </div>
+                    <div class="Alojamientos-info">
+                        <h3>Copacabana Palace, A Belmond Hotel</h3>
+                        <p>📍 Río de Janeiro, Brasil</p>
+                        <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        <button class="details-btn" >Ver Más</button>
+                    </div>
+                </div>
+                <div class="Alojamientos-card">
+                    <div class="Alojamientos-image">
+                        <img src="https://media.z-suite.it/hoteltorreargentina.com/public/crop/Hotel_della_Torre_Argentina_-_62-e828710be331ede19f75495b7b9a10ec-frontend-templ-c4.jpg?v=2 " alt="Alojamiento-1" >
+                    </div>
+                    <div class="Alojamientos-info">
+                        <h3>Hotel Brunelleschi</h3>
+                        <p>📍 Florencia, Italia</p>
+                        <p> ⭐️⭐️⭐️⭐️</p>
+                        <button class="details-btn" >Ver Más</button>
+                    </div>
+                </div>
+            </div>
+       
+        </section>
+    
+        <section class="content-disney mt-5 disney">
+            <section class="icons  ">
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/0c/e8/be/0ce8be094ba3da8e5c0667a29fdf8054.jpg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/ce/d6/86/ced6867171820673d004f3b930acf31f.jpg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/91/01/8e/91018ec3dc2596df78261863c65ed764.jpg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/47/f1/f0/47f1f053328978e6f8f6efa74e0c7cf4.jpg" alt="">
+                 
+                </div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/c1/54/35/c15435758382df941ba61537849b6d83.jpg" class="princesa-1" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/564x/59/35/85/593585b64759da2eceed9fdbc43b7f69.jpg">
+               
+            </section>
+            <div class="container content-d d-lg-flex d-block align-items-center" id="Disney">
+                <img src="https://i.pinimg.com/564x/9c/ee/7e/9cee7eeea628ec7247e86d316d6a3575.jpg" alt="Disney Travel" class="img-fluid d-none d-lg-block rounded shadow">
+                <div class="content-texto ms-4">
+                    <h2 class="title">D15NEY</h2>
+                    <h3 class="subtitle">¡Con D15 los sueños se hacen realidad!</h3>
+                    <p class="description">
+                        Te llevamos a la tierra mágica donde todos los sueños se hacen realidad. Explora las increíbles ofertas que ofrecemos para no perderte ningún rincón de este maravilloso lugar. Descubre la magia de Disney, la emoción de Universal, y la aventura en Isla de Aventura. ¡Todo en un solo paquete increíble!
+                    </p>
+                    <ul class="highlights">
+                        <li>✨ Visita Miami, Orlando y Hollywood.</li>
+                        <li>🎢 Disfruta de las atracciones más emocionantes.</li>
+                        <li>🏨 Alojamientos de lujo y experiencias VIP.</li>
+                        <li>🎟️ Paquetes exclusivos con entradas incluidas.</li>
+                    </ul>
+                    <a href="#" class="btn boton mt-3">Ver Más</a>
+                </div>
+            </div>
+            
+          
+              
+        </section>
+       
+        <section class="mt-5 contenedor-galeria d-lg-block d-none"> 
+            <h2>Experiencia Disney</h2>
+          <section class="container-img">
+           
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/64/d6/62/64d662d12fc752649d347c789a8d5912.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/0e/62/de/0e62de8321017eb54dddcc28c9df9051.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/b9/23/31/b923317277862195c0594367c204a000.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/d7/c0/f4/d7c0f42953e52f27ea77e21c87148059.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/97/c6/23/97c62328600b1ca46bcc3e2955739cb4.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/cd/c6/92/cdc69224aaefbcf68edcc3fd49684963.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="https://i.pinimg.com/564x/62/7d/5d/627d5d04446003775bb9286f66c12132.jpg" alt="">
+                    </figure>
+                </a>
+            </div>
+          </section>
+          </section>
+          <div class="gallery-wrap container d-lg-none d-block">
+            <h2>Experiencia Disney</h2>
+            <button class="scroll-btn left" id="backBtn">&#10094;</button>
+            <div class="gallery">
+              <span>
+                <img src="https://i.pinimg.com/564x/86/b5/2e/86b52e3e286ab700663b76b008c57b47.jpg" alt="">
+              </span>
+              <span>
+                <img src="https://i.pinimg.com/564x/1e/94/96/1e9496b5b529e8df107c367314ad4052.jpg" alt="">
+              </span>
+              <span>
+                <img src="https://i.pinimg.com/564x/6f/0d/8d/6f0d8d4e88321f39a977bb04b10d1709.jpg" alt="">
+              </span>
+              <span>
+                <img src="https://i.pinimg.com/564x/36/c4/23/36c423ad029665b03bd19bd547bf742d.jpg" alt="">
+              </span>
+              <span>
+                <img src="https://i.pinimg.com/736x/de/ee/7b/deee7bd843ca9b69de684fae3e2b0765.jpg" alt="">
+              </span>
+            </div>
+            <button class="scroll-btn right" id="nextBtn">&#10095;</button>
+          </div>
+    
+        </section>
+        <section class="container mt-5" id="Experiencias">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="texto-foto-C">
+                  <h2>Opiniones de Nuestros Viajeros</h2>
+                  <p>Nos enorgullece ofrecer experiencias de viaje inolvidables. Pero no tomes solo nuestra palabra; escucha lo que nuestros clientes tienen que decir. Estos son algunos de los comentarios que hemos recibido de personas que han vivido aventuras excepcionales con nosotros. ¡Tu próxima historia de viaje podría ser la próxima en aparecer aquí!</p>
+                  
+                 
+               
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div id="comentarios-lista" class="mb-4">
+                  <div class="comentario-item d-flex align-items-start mb-3">
+                    <img src="https://i.pinimg.com/564x/1c/43/4d/1c434d1640f9572e2ac7be5c6bac9348.jpg" alt="Foto de Juan" class="comentario-foto rounded-circle me-3 img-fluid" style="width: 60px; height: 60px;">
+                    <div class="comentario-texto">
+                      <h5 class="mb-1">Juan Pérez</h5>
+                      <p class="mb-0">¡Excelente experiencia! El viaje superó todas mis expectativas.</p>
+                    </div>
+                  </div>
+                  <div class="comentario-item d-flex align-items-start mb-3">
+                    <img src="https://i.pinimg.com/564x/1c/43/4d/1c434d1640f9572e2ac7be5c6bac9348.jpg" alt="Foto de María" class="comentario-foto rounded-circle me-3 img-fluid" style="width: 60px; height: 60px;">
+                    <div class="comentario-texto">
+                      <h5 class="mb-1">María García</h5>
+                      <p class="mb-0">Un servicio increíble, definitivamente viajaría con esta agencia otra vez.</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <form id="form-comentarios">
+                  <div class="mb-3">
+                    <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="mb-3">
+                    <textarea id="comentario" class="form-control" placeholder="Escribe tu comentario" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Agregar Comentario</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          
+        
+    </main>
     <footer class="fondoNavFooter">
       <div class="container">
           <div class="row mt-4 justify-content-center align-items-center">
@@ -83,5 +551,6 @@
         </div>
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
