@@ -63,8 +63,8 @@ async function load_data_table(table, data) {
         <th>${item.name}</th>
         <th>${item.category}</th>
         <th>${item.price}</th>
-        <td><button>U</button>
-        <button onclick="borrarPaquete()">D</button></td>
+        <td><button><i class="bi bi-arrow-down-up"></i></button>
+        <button onclick="borrarPaquete()"><i class="bi bi-trash"></i></button></td>
       </tr>
     `;
   });
