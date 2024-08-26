@@ -152,6 +152,9 @@
                     type="text"
                     class="form-control rounded-3"
                     id="pack_name"
+                    required
+                    minlength="10"
+                    maxlength="50"
                   />
                   <label for="pack_name">Nombre del Paquete</label>
                 </div>
@@ -161,6 +164,9 @@
                     class="form-control rounded-3"
                     list="data_category"
                     id="category"
+                    required
+                    minlength="10"
+                    maxlength="50"
                   />
                   <label for="category">Categoria</label>
                   <datalist id="data_category"></datalist>
@@ -170,6 +176,7 @@
                     type="number"
                     class="form-control rounded-3"
                     id="price"
+                    required
                   />
                   <label for="price">Precio</label>
                 </div>
@@ -185,6 +192,8 @@
                   <textarea
                     class="form-control rounded-3"
                     id="description"
+                    minlength="10"
+                    maxlength="100"
                   ></textarea>
                   <label for="description">Descripcion</label>
                 </div>
@@ -232,6 +241,9 @@
                     type="text"
                     class="form-control rounded-3"
                     id="acpack_name"
+                    required
+                    minlength="10"
+                    maxlength="50"
                   />
                   <label for="acpack_name">Nombre del Paquete</label>
                 </div>
@@ -241,6 +253,9 @@
                     class="form-control rounded-3"
                     list="data_category"
                     id="accategory"
+                    required
+                    minlength="10"
+                    maxlength="50"
                   />
                   <label for="accategory">Categoria</label>
                   <datalist id="data_category"></datalist>
@@ -250,6 +265,7 @@
                     type="number"
                     class="form-control rounded-3"
                     id="acprice"
+                    required
                   />
                   <label for="acprice">Precio</label>
                 </div>
@@ -265,6 +281,8 @@
                   <textarea
                     class="form-control rounded-3"
                     id="acdescription"
+                    minlength="10"
+                    maxlength="100"
                   ></textarea>
                   <label for="acdescription">Descripcion</label>
                 </div>
@@ -328,7 +346,8 @@
         </div>
       </div>
     </footer>
-    <script src="/scripts/admin.js"></script>
+    <script src="../scripts/admin.js"></script>
+    <script src="../scripts/validaciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

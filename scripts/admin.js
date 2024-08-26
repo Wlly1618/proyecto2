@@ -1,8 +1,7 @@
 // Variables
 let packs = get_from_storage("array_packs");
 
-if (packs.length < 1)
-{
+if (packs.length < 1) {
   packs.push({
     id: 1,
     name: "Escapada a Mendoza",
@@ -78,7 +77,6 @@ const borrarPaquete = (id) => {
   });
 };
 
-
 function get_packs_name(out) {
   packs.forEach((item) => {
     out.push(item.name);
@@ -114,7 +112,6 @@ function load_data_table(table, data) {
   table.querySelector("tbody").innerHTML = text;
 }
 
-
 get_packs_name(packs_name);
 
 load_datalist(data_search, packs_name);
@@ -122,17 +119,60 @@ load_datalist(data_category, categorys);
 
 load_data_table(pack_table, packs);
 
+// Validaciones
+function validateForm() {
+  let isValid = true;
+
+  // Validaciones para crear paquete
+  if (pack_name.value.trim() === "" || pack_name.value.length < 5 || pack_name.value.length > 50) {
+    Swal.fire({
+      title: "Error",
+      text: "El nombre del paquete debe tener entre 5 y 50 caracteres.",
+      icon: "error",
+    });
+    isValid = false;
+  }
+
+  if (!category.value.trim()) {
+    Swal.fire({
+      title: "Error",
+      text: "La categoría es requerida.",
+      icon: "error",
+    });
+    isValid = false;
+  }
+
+  if (!price.value.trim() || isNaN(price.value)) {
+    Swal.fire({
+      title: "Error",
+      text: "El precio debe ser un número válido.",
+      icon: "error",
+    });
+    isValid = false;
+  }
+
+  if (description.value.trim().length < 10 || description.value.trim().length > 80) {
+    Swal.fire({
+      title: "Error",
+      text: "La descripción debe tener entre 10 y 80 caracteres.",
+      icon: "error",
+    });
+    isValid = false;
+  }
+
+  return isValid;
+}
+
 create_pack_form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  packs = get_from_storage("array_packs");
-  // packs = [];
-
-  if (packs.length > 0) {
-    it = packs[packs.length - 1].id + 1;
-  } else {
-    it = 1;
+  if (!validateForm()) {
+    return;
   }
+
+  packs = get_from_storage("array_packs");
+
+  const it = packs.length > 0 ? packs[packs.length - 1].id + 1 : 1;
 
   const item = {
     id: it,
@@ -146,13 +186,13 @@ create_pack_form.addEventListener("submit", async (event) => {
   packs.push(item);
 
   set_in_localstorage("array_packs", packs);
-  
+
   load_data_table(pack_table, packs);
 
   create_pack_form.reset();
 });
 
-// busqueda de paquetes en la tabla
+// Busqueda de paquetes en la tabla
 document.getElementById("search_form").addEventListener("submit", function(event) {
   event.preventDefault();
 
