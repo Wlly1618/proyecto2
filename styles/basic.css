@@ -53,7 +53,6 @@ main {
 }
 .hrFooter {
   color: var(--dorado-suave);
-  font-weight: bold;
 }
 /* estilos pagina administrador */
 .titulos {
@@ -61,13 +60,11 @@ main {
 }
 .subtitulos {
   color: var(--rosa-coral);
-  font-weight: bold;
 }
 #botonNuevoPaquete {
   background-color: var(--dorado-suave);
   border: none;
   color: var(--gris-oscuro);
-  font-weight: bold;
 }
 #botonNuevoPaquete:hover {
   box-shadow: 0px 4px 9px var(--gris-oscuro);
@@ -76,7 +73,6 @@ main {
   background-color: var(--gris-oscuro);
   border: none;
   color: var(--dorado-suave);
-  font-weight: bold;
 }
 #botonBuscar:hover {
   box-shadow: 0px 4px 9px var(--gris-oscuro);
@@ -103,7 +99,6 @@ main {
   margin-top: 265px;
   text-align: center;
   font-size: 100px;
-  font-weight: bold;
   margin-bottom: 0;
   text-shadow: 0px 2px 2px black;
 }
@@ -111,7 +106,6 @@ main {
 #textoError {
   color: var(--dorado-suave);
   font-size: 30px;
-  font-weight: bold;
   text-shadow: 0px 2px 2px black;
 }
 
@@ -137,7 +131,6 @@ main {
   color: var(--blanco-hueso);
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
   transition: background-color 0.3s ease;
   box-shadow: 0 3px 9px black;
 }
@@ -301,12 +294,10 @@ main {
 /* estilos pagina detalle */
 .etiquetasA{
   color: var(--rosa-coral);
-  font-weight: bold;
 }
 .letrasCarrousel{
   background-color: var(--gris-oscuro);
   color: var(--dorado-suave);
-  font-weight: bold;
 }
 .titulosOpiniones{
   color: var(--rosa-coral);
@@ -314,7 +305,6 @@ main {
 .btnOpiniones{
   background-color: var(--gris-oscuro);
   color: var(--dorado-suave);
-  font-weight: bold;
 }
 .btnOpiniones:hover{
   background-color: var(--dorado-suave);
