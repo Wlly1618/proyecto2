@@ -1,0 +1,61 @@
+.nosotros-section {
+    background-color: #4d4d51;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #e25300;
+}
+
+.nosotros-card {
+    background-color: #252529;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px; /* Añadir perspectiva 3D */
+}
+
+.nosotros-card:hover {
+    transform: scale(1.05) rotateY(10deg); /* Rotación en Y para el efecto 3D */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el efecto */
+}
+
+.nosotros-image {
+    perspective: 1000px; /* Añadir perspectiva 3D */
+}
+
+.nosotros-image img {
+    width: 250px;
+    height: 200px;
+    border-radius: 30%;
+    margin-bottom: 15px;
+    border: 5px solid  #e5f133;;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto 3D */
+    object-fit: cover;
+}
+
+.nosotros-image img:hover {
+    transform: rotateX(15deg) rotateY(15deg) scale(1.1); /* Rotación en ambos ejes y un poco de escala */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6); /* Sombra para acentuar el efecto 3D */
+}
+
+.nosotros-image:hover img {
+    transform: rotateY(-10deg); /* Rotación en sentido contrario para mejorar el efecto 3D */
+}
+
+.nosotros-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #e25300;
+}
+
+.nosotros-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
