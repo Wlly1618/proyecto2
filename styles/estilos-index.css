@@ -87,7 +87,7 @@
  
  .banner-content h1 {
      margin-bottom: 20px;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-weight: 400;
      font-style: normal;
      font-size: 3.5em;
@@ -114,7 +114,7 @@
      color: rgb(255, 255, 249);
      cursor: pointer;
      border-radius: 30px 50px 60px 120px;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-weight: 400;
      font-style: normal;
      letter-spacing: 1px;
@@ -186,7 +186,7 @@
      text-transform: uppercase;
      letter-spacing: 2px;
      text-align: start;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
  }
  
@@ -237,7 +237,7 @@
      font-weight: bold;
      letter-spacing: 4px;
      text-transform: uppercase;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
  }
  .country-card-text ul {
@@ -371,7 +371,7 @@
      font-size: 2.5rem;
      color: #333;
      margin-bottom: 10px;
-     font-family: 'Arial', sans-serif;
+     font-family: "Oswald", sans-serif;
      font-weight: bold;
  }
  
@@ -379,7 +379,7 @@
      font-size: 1.75rem;
      color: #555;
      margin-bottom: 15px;
-     font-family: 'Arial', sans-serif;
+     font-family: "Oswald", sans-serif;
  }
  
  .description {
@@ -387,7 +387,7 @@
      color: #666;
      margin-bottom: 20px;
      line-height: 1.6;
-     font-family: 'Arial', sans-serif;
+     font-family: "Oswald", sans-serif;
  }
  
  .highlights {
@@ -399,7 +399,7 @@
      font-size: 1rem;
      color: #444;
      margin-bottom: 10px;
-     font-family: 'Arial', sans-serif;
+     font-family: "Oswald", sans-serif;
  }
  
  .boton {
@@ -433,7 +433,7 @@
      font-weight: bold;
      letter-spacing: 2px;
      text-transform: uppercase;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
      color: #2b2b2bd7;
  }
@@ -504,7 +504,7 @@
  .product-category {
      padding: 0 5vw;
      margin-bottom: 40px;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-weight: 400;
      font-style: normal;
      font-size:1.8em;
@@ -603,7 +603,7 @@
  .product-brand {
      font-size: 20px; 
      margin-bottom: 10px; 
-     font-family: 'Montserrat', sans-serif;
+     font-family: "Oswald", sans-serif;
      font-weight: 600; 
      color: #333; 
      text-align: center;
@@ -631,7 +631,7 @@
      text-transform: uppercase;
      letter-spacing: 2px;
      text-align: start;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
  }
    
@@ -640,7 +640,7 @@
      text-align: start;
      font-size: 1.2em;
      color: #33322fc0;
-   font-family: Arial, Helvetica, sans-serif;
+     font-family: "Oswald", sans-serif;
      text-align: start;
   
  }
@@ -732,7 +732,7 @@
      text-transform: uppercase;
      letter-spacing: 2px;
      text-align: start;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
  }
  
@@ -820,7 +820,7 @@
      font-weight: bold;
      letter-spacing: 2px;
      text-transform: uppercase;
-     font-family: "Bowlby One", sans-serif;
+     font-family: "Oswald", sans-serif;
      font-style: normal; 
      color: #505050d7;
  }
