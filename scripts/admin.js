@@ -120,6 +120,10 @@ load_data_table(pack_table, packs);
 
 create_pack_form.addEventListener("submit", async (event) => {
   event.preventDefault();
+    // Validar el formulario
+    if (!validateForm()) {
+      return;
+    }
 
   packs = get_from_storage("array_packs");
   // packs = [];
@@ -145,7 +149,7 @@ create_pack_form.addEventListener("submit", async (event) => {
   
   load_data_table(pack_table, packs);
 
-  create_pack_form.reset();
+  create_pack_form.reset(); 
 });
 
 // busqueda de paquetes en la tabla
