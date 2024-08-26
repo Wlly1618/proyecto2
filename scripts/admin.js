@@ -94,7 +94,7 @@ function load_datalist(data_element, data) {
   data_element.innerHTML = text;
 }
 
-async function load_data_table(table, data) {
+function load_data_table(table, data) {
   let text = ``;
   data.forEach((item) => {
     text += `
@@ -103,13 +103,17 @@ async function load_data_table(table, data) {
         <th>${item.name}</th>
         <th>${item.category}</th>
         <th>${item.price}</th>
-        <td><button><i class="bi bi-eye"></i></button><button><i class="bi bi-recycle"></i></button><button onclick="borrarPaquete('${item.id}')"><i class="bi bi-trash"></i></button></td>
+        <td>
+          <button onclick="editarPaquete(${item.id})"><i class="bi bi-pencil"></i></button>
+          <button onclick="borrarPaquete(${item.id})"><i class="bi bi-trash"></i></button>
+        </td>
       </tr>
     `;
   });
 
   table.querySelector("tbody").innerHTML = text;
 }
+
 
 get_packs_name(packs_name);
 
@@ -156,4 +160,73 @@ document.getElementById("search_form").addEventListener("submit", function(event
   const filteredPacks = packs.filter(pack => pack.name.toLowerCase().includes(searchQuery));
 
   load_data_table(pack_table, filteredPacks);
+});
+
+let paqueteEditandoId = null;
+
+const editarPaquete = (id) => {
+  paqueteEditandoId = id; // Guardar el ID del paquete que se está editando
+
+  const paquete = packs.find(item => item.id === id);
+
+  if (paquete) {
+    // Llenar el formulario con los datos del paquete
+    document.getElementById('acpack_name').value = paquete.name;
+    document.getElementById('accategory').value = paquete.category;
+    document.getElementById('acprice').value = paquete.price;
+    document.getElementById('acurl_img').value = paquete.url;
+    document.getElementById('acdescription').value = paquete.description;
+
+    // Mostrar el modal
+    const editarModal = new bootstrap.Modal(document.getElementById('editar_modal'));
+    editarModal.show();
+  } else {
+    Swal.fire({
+      title: "Error",
+      text: "No se encontró el paquete a editar",
+      icon: "error",
+    });
+  }
+};
+
+document.getElementById('editar_pack_form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  if (paqueteEditandoId !== null) {
+    // Encontrar el paquete que se está editando
+    packs = packs.map(pack => {
+      if (pack.id === paqueteEditandoId) {
+        // Actualizar el paquete con los nuevos valores
+        return {
+          id: paqueteEditandoId,
+          name: document.getElementById('acpack_name').value,
+          category: document.getElementById('accategory').value,
+          price: document.getElementById('acprice').value,
+          description: document.getElementById('acdescription').value,
+          url: document.getElementById('acurl_img').value
+        };
+      }
+      return pack;
+    });
+
+    // Guardar los cambios en el localStorage
+    set_in_localstorage("array_packs", packs);
+
+    // Resetear el ID del paquete en edición
+    paqueteEditandoId = null;
+
+    Swal.fire({
+      title: "Éxito",
+      text: "El paquete ha sido actualizado",
+      icon: "success",
+    });
+
+    // Recargar la tabla con los datos actualizados
+    load_data_table(pack_table, packs);
+
+    // Resetear el formulario y cerrar el modal
+    document.getElementById('editar_pack_form').reset();
+    const editarModal = bootstrap.Modal.getInstance(document.getElementById('editar_modal'));
+    editarModal.hide();
+  }
 });
